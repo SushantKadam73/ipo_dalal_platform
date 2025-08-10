@@ -56,4 +56,7 @@ crons.interval("fetch NSE IPO data", { minutes: 5 }, internal.nse.fetchNseData, 
 // Fetch bid details for mainboard IPOs every 1 minute
 crons.interval("fetch bid details", { minutes: 1 }, internal.bidDetailsFetch.fetchAllBidDetails, {});
 
+// Fetch bid details for SME IPOs every 2 minutes
+crons.interval("fetch SME bid details", { minutes: 2 }, internal.bidDetailsFetchSME.fetchAllBidDetailsSME, {});
+
 export default crons;

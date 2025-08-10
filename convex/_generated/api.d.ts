@@ -16,6 +16,8 @@ import type {
 import type * as auth from "../auth.js";
 import type * as bidDetails from "../bidDetails.js";
 import type * as bidDetailsFetch from "../bidDetailsFetch.js";
+import type * as bidDetailsFetchSME from "../bidDetailsFetchSME.js";
+import type * as bidDetailsFetchSME_new from "../bidDetailsFetchSME_new.js";
 import type * as bidDetailsTest from "../bidDetailsTest.js";
 import type * as crons from "../crons.js";
 import type * as debug from "../debug.js";
@@ -36,6 +38,8 @@ declare const fullApi: ApiFromModules<{
   auth: typeof auth;
   bidDetails: typeof bidDetails;
   bidDetailsFetch: typeof bidDetailsFetch;
+  bidDetailsFetchSME: typeof bidDetailsFetchSME;
+  bidDetailsFetchSME_new: typeof bidDetailsFetchSME_new;
   bidDetailsTest: typeof bidDetailsTest;
   crons: typeof crons;
   debug: typeof debug;
