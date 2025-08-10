@@ -92,6 +92,18 @@ async function processBidData(ctx: any, data: any, symbol: string, companyName: 
   
   let processedCount = 0;
 
+  // Helper function to format numeric strings
+  const formatNumericValue = (value: string | null | undefined): string => {
+    if (!value) return "0";
+    const num = parseFloat(value);
+    if (isNaN(num)) return value; // Return original string if not a number
+    if (value.toLowerCase().includes('e')) {
+      return num.toFixed(0); // Convert scientific notation to full number
+    }
+    // Round to 3 decimal places if it's a float, otherwise return as is
+    return Number.isInteger(num) ? num.toString() : num.toFixed(3);
+  };
+
   // Skip header rows but include Total rows (where srNo is null but category is "Total")
   const actualBidData = bidDataList.filter(item => {
     // Include if srNo exists and is not a header
@@ -109,9 +121,9 @@ async function processBidData(ctx: any, data: any, symbol: string, companyName: 
 
   for (const bidDetail of actualBidData) {
     try {
-      // Use "TOTAL" as srNo for total records, otherwise use the actual srNo or empty string
+      // Use "0" as srNo for total records, otherwise use the actual srNo or empty string
       const srNoValue = !bidDetail.srNo && bidDetail.category?.toLowerCase() === "total" 
-        ? "TOTAL" 
+        ? "0" 
         : (bidDetail.srNo || "");
       
       // Store in the new time series table
@@ -119,9 +131,9 @@ async function processBidData(ctx: any, data: any, symbol: string, companyName: 
         symbol: symbol,
         srNo: srNoValue,
         category: bidDetail.category || "",
-        noOfShareOffered: bidDetail.noOfShareOffered || "",
-        noOfSharesBid: bidDetail.noOfSharesBid || "",
-        noOfTotalMeant: bidDetail.noOfTotalMeant || "",
+        noOfShareOffered: formatNumericValue(bidDetail.noOfShareOffered),
+        noOfSharesBid: formatNumericValue(bidDetail.noOfSharesBid),
+        noOfTotalMeant: formatNumericValue(bidDetail.noOfTotalMeant),
         updateTime: updateTime,
       });
       
@@ -131,9 +143,9 @@ async function processBidData(ctx: any, data: any, symbol: string, companyName: 
         companyName: companyName,
         srNo: srNoValue,
         category: bidDetail.category || "",
-        noOfShareOffered: bidDetail.noOfShareOffered || "",
-        noOfSharesBid: bidDetail.noOfSharesBid || "",
-        noOfTotalMeant: bidDetail.noOfTotalMeant || "",
+        noOfShareOffered: formatNumericValue(bidDetail.noOfShareOffered),
+        noOfSharesBid: formatNumericValue(bidDetail.noOfSharesBid),
+        noOfTotalMeant: formatNumericValue(bidDetail.noOfTotalMeant),
       });
       
       processedCount++;
@@ -199,7 +211,7 @@ async function fetchBidDetailsForSymbol(ctx: any, symbol: string, companyName: s
       method: "GET",
       headers: {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp/image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
         "Accept-Language": "en-US,en;q=0.9",
         "Accept-Encoding": "gzip, deflate, br",
         "DNT": "1",
