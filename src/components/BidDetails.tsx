@@ -1,5 +1,7 @@
 import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
+import { SubscriptionCharts } from "./SubscriptionCharts";
+import { SubscriptionTimeSeriesChart } from "./SubscriptionTimeSeriesChart";
 
 interface BidDetailsProps {
   symbol: string;
@@ -9,6 +11,15 @@ interface BidDetailsProps {
 export function BidDetails({ symbol, companyName }: BidDetailsProps) {
   const bidDetails = useQuery(api.bidDetails.getBidDetailsBySymbol, { symbol });
   const bidSummary = useQuery(api.bidDetails.getBidDetailsSummary, { symbol });
+  
+  // Try to get time series data - first check for EQ (mainboard), then SME
+  const bidDetailsActiveEQ = useQuery(api.bidDetails.getBidDetailsActiveEQSummary, { symbol });
+  const bidDetailsActiveSME = useQuery(api.bidDetails.getBidDetailsActiveSMESummary, { symbol });
+  
+  // Use whichever time series data is available
+  const timeSeriesData = bidDetailsActiveEQ?.timeSeriesData || bidDetailsActiveSME?.timeSeriesData || null;
+  const hasTimeSeriesData = timeSeriesData && timeSeriesData.length > 0;
+  const isSME = bidDetailsActiveSME && !bidDetailsActiveEQ;
 
   if (bidDetails === undefined) {
     return (
@@ -27,7 +38,7 @@ export function BidDetails({ symbol, companyName }: BidDetailsProps) {
   }
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       {/* Summary */}
       {bidSummary && (
         <div className="bg-blue-50 p-4 rounded-lg">
@@ -61,6 +72,23 @@ export function BidDetails({ symbol, companyName }: BidDetailsProps) {
             </div>
           </div>
         </div>
+      )}
+
+      {/* Subscription Charts */}
+      <SubscriptionCharts 
+        bidDetails={bidDetails} 
+        companyName={companyName}
+        symbol={symbol}
+      />
+
+      {/* Time Series Chart */}
+      {hasTimeSeriesData && (
+        <SubscriptionTimeSeriesChart
+          timeSeriesData={timeSeriesData}
+          symbol={symbol}
+          companyName={companyName}
+          type={isSME ? 'SME' : 'EQ'}
+        />
       )}
 
       {/* Detailed Table */}
