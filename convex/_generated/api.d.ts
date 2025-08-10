@@ -16,6 +16,7 @@ import type {
 import type * as auth from "../auth.js";
 import type * as bidDetails from "../bidDetails.js";
 import type * as bidDetailsFetch from "../bidDetailsFetch.js";
+import type * as bidDetailsTest from "../bidDetailsTest.js";
 import type * as crons from "../crons.js";
 import type * as debug from "../debug.js";
 import type * as http from "../http.js";
@@ -35,6 +36,7 @@ declare const fullApi: ApiFromModules<{
   auth: typeof auth;
   bidDetails: typeof bidDetails;
   bidDetailsFetch: typeof bidDetailsFetch;
+  bidDetailsTest: typeof bidDetailsTest;
   crons: typeof crons;
   debug: typeof debug;
   http: typeof http;

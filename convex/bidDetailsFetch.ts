@@ -76,10 +76,11 @@ export const fetchAllBidDetails = internalAction({
   },
 });
 
-// Helper function to process bid data
+// Helper function to process bid data for time series storage
 async function processBidData(ctx: any, data: any, symbol: string, companyName: string) {
-  // The response structure contains dataList
+  // The response structure contains dataList and updateTime
   const bidDataList = data.dataList || [];
+  const updateTime = data.updateTime || "";
 
   if (!Array.isArray(bidDataList)) {
     console.error(`Expected array in dataList but got: ${typeof bidDataList}`);
@@ -87,27 +88,60 @@ async function processBidData(ctx: any, data: any, symbol: string, companyName: 
   }
 
   console.log(`Processing ${bidDataList.length} bid categories for ${symbol}...`);
+  console.log(`Update time from API: ${updateTime}`);
+  
   let processedCount = 0;
 
-  // Skip the first entry if it's a header row
-  const actualBidData = bidDataList.filter(item => 
-    item.srNo && item.srNo !== "Sr.No." && item.srNo !== "[Sr.No](http://sr.no/)."
-  );
+  // Skip header rows but include Total rows (where srNo is null but category is "Total")
+  const actualBidData = bidDataList.filter(item => {
+    // Include if srNo exists and is not a header
+    if (item.srNo && item.srNo !== "Sr.No." && item.srNo !== "[Sr.No](http://sr.no/).") {
+      return true;
+    }
+    // Also include Total rows (where srNo is null but category is "Total")
+    if (!item.srNo && item.category && item.category.toLowerCase() === "total") {
+      return true;
+    }
+    return false;
+  });
+
+  console.log(`Found ${actualBidData.length} actual bid data entries after filtering headers`);
 
   for (const bidDetail of actualBidData) {
     try {
+      // Use "TOTAL" as srNo for total records, otherwise use the actual srNo or empty string
+      const srNoValue = !bidDetail.srNo && bidDetail.category?.toLowerCase() === "total" 
+        ? "TOTAL" 
+        : (bidDetail.srNo || "");
+      
+      // Store in the new time series table
+      await ctx.runMutation(internal.bidDetails.upsertBidDetailActiveEQ, {
+        symbol: symbol,
+        srNo: srNoValue,
+        category: bidDetail.category || "",
+        noOfShareOffered: bidDetail.noOfShareOffered || "",
+        noOfSharesBid: bidDetail.noOfSharesBid || "",
+        noOfTotalMeant: bidDetail.noOfTotalMeant || "",
+        updateTime: updateTime,
+      });
+      
+      // Also keep the old table updated for backward compatibility
       await ctx.runMutation(internal.bidDetails.upsertBidDetail, {
         symbol: symbol,
         companyName: companyName,
-        srNo: bidDetail.srNo || "",
+        srNo: srNoValue,
         category: bidDetail.category || "",
         noOfShareOffered: bidDetail.noOfShareOffered || "",
         noOfSharesBid: bidDetail.noOfSharesBid || "",
         noOfTotalMeant: bidDetail.noOfTotalMeant || "",
       });
+      
       processedCount++;
+      const isTotal = !bidDetail.srNo && bidDetail.category?.toLowerCase() === "total";
+      const logPrefix = isTotal ? "🔢 [TOTAL]" : "✅";
+      console.log(`${logPrefix} Processed bid detail for ${symbol} - ${bidDetail.category} (${srNoValue})`);
     } catch (mutationError) {
-      console.error(`Error upserting bid detail for ${symbol}:`, bidDetail, mutationError);
+      console.error(`❌ Error upserting bid detail for ${symbol}:`, bidDetail, mutationError);
     }
   }
 
