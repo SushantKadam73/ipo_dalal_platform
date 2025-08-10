@@ -80,13 +80,14 @@ export const fetchAllBidDetails = internalAction({
 async function processBidData(ctx: any, data: any, symbol: string, companyName: string) {
   // The response structure contains dataList
   const bidDataList = data.dataList || [];
+  const apiTimestamp = data.updateTime || `Updated as on ${new Date().toLocaleDateString('en-GB', {day: '2-digit', month: 'short', year: 'numeric'})} ${new Date().toLocaleTimeString('en-GB', {hour12: false})}`;
 
   if (!Array.isArray(bidDataList)) {
     console.error(`Expected array in dataList but got: ${typeof bidDataList}`);
     return { success: false, error: `Invalid data format`, count: 0 };
   }
 
-  console.log(`Processing ${bidDataList.length} bid categories for ${symbol}...`);
+  console.log(`📊 Processing ${bidDataList.length} bid categories for ${symbol} with timestamp: ${apiTimestamp}`);
   let processedCount = 0;
 
   // Skip the first entry if it's a header row
@@ -96,6 +97,7 @@ async function processBidData(ctx: any, data: any, symbol: string, companyName: 
 
   for (const bidDetail of actualBidData) {
     try {
+      // Save to existing flat structure (keeping for backward compatibility)
       await ctx.runMutation(internal.bidDetails.upsertBidDetail, {
         symbol: symbol,
         companyName: companyName,
@@ -105,13 +107,31 @@ async function processBidData(ctx: any, data: any, symbol: string, companyName: 
         noOfSharesBid: bidDetail.noOfSharesBid || "",
         noOfTotalMeant: bidDetail.noOfTotalMeant || "",
       });
+
+      // Save to new timeseries structure using SR. NO. and API timestamp
+      try {
+        await ctx.runMutation(internal.bidTimeseries.upsertTimeseriesData, {
+          symbol: symbol,
+          companyName: companyName,
+          srNo: bidDetail.srNo || "",
+          noOfShareOffered: bidDetail.noOfShareOffered || "",
+          noOfSharesBid: bidDetail.noOfSharesBid || "",
+          noOfTotalMeant: bidDetail.noOfTotalMeant || "",
+          apiTimestamp: apiTimestamp, // Use API's own timestamp
+          status: "Active",
+        });
+        console.log(`📈 Saved timeseries data for ${symbol} SR.NO. ${bidDetail.srNo} with timestamp ${apiTimestamp}`);
+      } catch (timeseriesError) {
+        console.log(`⚠️ Failed to save timeseries data for ${symbol} - SR.NO. ${bidDetail.srNo}:`, timeseriesError);
+      }
+
       processedCount++;
     } catch (mutationError) {
       console.error(`Error upserting bid detail for ${symbol}:`, bidDetail, mutationError);
     }
   }
 
-  console.log(`Successfully processed ${processedCount} bid categories for ${symbol}`);
+  console.log(`✅ Successfully processed ${processedCount} bid categories for ${symbol}`);
   return { success: true, count: processedCount };
 }
 

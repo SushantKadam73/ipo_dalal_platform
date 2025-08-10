@@ -3,6 +3,7 @@ import { api } from "../convex/_generated/api";
 import { useState } from "react";
 import React from "react";
 import { BidDetails } from "./components/BidDetails";
+import TimeseriesView from "./components/TimeseriesView";
 
 export function IpoDashboard() {
   const [selectedStatus, setSelectedStatus] = useState<string>("");
@@ -10,6 +11,8 @@ export function IpoDashboard() {
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [isRefreshingBids, setIsRefreshingBids] = useState(false);
   const [expandedBidDetails, setExpandedBidDetails] = useState<string | null>(null);
+  const [selectedTimeseriesView, setSelectedTimeseriesView] = useState<string | null>(null);
+  const [viewMode, setViewMode] = useState<'table' | 'timeseries'>('table');
   
   const ipos = useQuery(api.ipos.listIpos, {
     status: selectedStatus || undefined,
@@ -146,21 +149,68 @@ export function IpoDashboard() {
         </div>
       </div>
 
-      {/* IPO List */}
-      <div className="bg-white rounded-lg shadow overflow-hidden">
-        <div className="px-6 py-4 border-b border-gray-200">
-          <h2 className="text-lg font-semibold text-gray-900">
-            IPO Listings ({ipos.length} found)
-          </h2>
+      {/* View Mode Toggle */}
+      <div className="flex flex-wrap gap-4 p-4 bg-white rounded-lg shadow">
+        <div className="flex items-center space-x-4">
+          <span className="text-sm font-medium text-gray-700">View Mode:</span>
+          <button
+            onClick={() => setViewMode('table')}
+            className={`px-4 py-2 rounded-md transition-colors ${
+              viewMode === 'table'
+                ? 'bg-blue-500 text-white'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            📊 Table View
+          </button>
+          <button
+            onClick={() => setViewMode('timeseries')}
+            className={`px-4 py-2 rounded-md transition-colors ${
+              viewMode === 'timeseries'
+                ? 'bg-blue-500 text-white'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            📈 Timeseries View
+          </button>
         </div>
-        
-        {ipos.length === 0 ? (
-          <div className="p-8 text-center text-gray-500">
-            No IPOs found matching your criteria
+      </div>
+
+      {/* Content Area - Conditional based on view mode */}
+      {viewMode === 'timeseries' ? (
+        // Timeseries View
+        <div className="space-y-6">
+          {/* Active IPOs for Timeseries */}
+          {ipos.filter(ipo => ipo.status === 'Active').length === 0 ? (
+            <div className="bg-white rounded-lg shadow p-8 text-center text-gray-500">
+              No active IPOs available for timeseries analysis
+            </div>
+          ) : (
+            ipos
+              .filter(ipo => ipo.status === 'Active')
+              .map((ipo) => (
+                <div key={ipo._id} className="bg-white rounded-lg shadow">
+                  <TimeseriesView symbol={ipo.symbol} companyName={ipo.companyName} />
+                </div>
+              ))
+          )}
+        </div>
+      ) : (
+        // Table View
+        <div className="bg-white rounded-lg shadow overflow-hidden">
+          <div className="px-6 py-4 border-b border-gray-200">
+            <h2 className="text-lg font-semibold text-gray-900">
+              IPO Listings ({ipos.length} found)
+            </h2>
           </div>
-        ) : (
-          <div className="overflow-x-auto">
-            <table className="min-w-full divide-y divide-gray-200">
+          
+          {ipos.length === 0 ? (
+            <div className="p-8 text-center text-gray-500">
+              No IPOs found matching your criteria
+            </div>
+          ) : (
+            <div className="overflow-x-auto">
+              <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
                 <tr>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -210,13 +260,13 @@ export function IpoDashboard() {
                 ))}
               </tbody>
             </table>
-          </div>
-        )}
-      </div>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }
-
 function StatCard({ title, value, color }: { title: string; value: number; color: string }) {
   return (
     <div className="bg-white rounded-lg shadow p-4">
