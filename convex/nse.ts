@@ -169,6 +169,26 @@ export const fetchNseData = internalAction({
   },
 });
 
+// Helper function to clean and validate string data
+function cleanStringData(value: any): string {
+  if (value === null || value === undefined) {
+    return "";
+  }
+  
+  // Convert to string and remove surrounding double quotes
+  let cleaned = String(value);
+  
+  // Remove surrounding double quotes if they exist
+  if (cleaned.startsWith('"') && cleaned.endsWith('"')) {
+    cleaned = cleaned.slice(1, -1);
+  }
+  
+  // Remove any additional escaping
+  cleaned = cleaned.replace(/\\"/g, '"');
+  
+  return cleaned.trim();
+}
+
 // Helper function to process IPO data
 async function processIpoData(ctx: any, ipoList: any) {
   if (!Array.isArray(ipoList)) {
@@ -190,25 +210,34 @@ async function processIpoData(ctx: any, ipoList: any) {
           continue;
         }
 
-        // Process and clean the data
+        // Process and clean the data with validation layer
         const processedData = {
-          symbol: ipoData.symbol,
-          companyName: ipoData.companyName,
-          series: (ipoData.series || "EQ") as "EQ" | "SME",
-          issueStartDate: ipoData.issueStartDate || "",
-          issueEndDate: ipoData.issueEndDate || "",
-          status: ipoData.status || "Unknown",
-          issueSize: ipoData.issueSize || "",
-          issuePrice: ipoData.issuePrice || "",
-          sr_no: typeof ipoData.sr_no === 'string' ? parseInt(ipoData.sr_no, 10) : (ipoData.sr_no || 0),
+          symbol: cleanStringData(ipoData.symbol),
+          companyName: cleanStringData(ipoData.companyName),
+          series: (cleanStringData(ipoData.series) || "EQ") as "EQ" | "SME",
+          issueStartDate: cleanStringData(ipoData.issueStartDate),
+          issueEndDate: cleanStringData(ipoData.issueEndDate),
+          status: cleanStringData(ipoData.status) || "Unknown",
+          issueSize: cleanStringData(ipoData.issueSize),
+          issuePrice: cleanStringData(ipoData.issuePrice),
+          sr_no: typeof ipoData.sr_no === 'string' ? parseInt(cleanStringData(ipoData.sr_no), 10) : (ipoData.sr_no || 0),
           isBse: ipoData.isBse,
-          // Process lotSize - convert string to number, handle various formats
+          // Process lotSize - clean string and convert to number, handle various formats
           lotSize: ipoData.lotSize ? (() => {
-            const lotSizeStr = String(ipoData.lotSize).replace(/[^0-9]/g, ''); // Remove non-numeric characters
+            const cleanedLotSize = cleanStringData(ipoData.lotSize);
+            const lotSizeStr = cleanedLotSize.replace(/[^0-9]/g, ''); // Remove non-numeric characters
             const lotSizeNum = parseInt(lotSizeStr, 10);
             return isNaN(lotSizeNum) ? undefined : lotSizeNum;
           })() : undefined,
         };
+
+        // Validate required fields after cleaning
+        if (!processedData.symbol || !processedData.companyName || 
+            processedData.symbol === '""' || processedData.companyName === '""') {
+          console.warn("Skipping IPO with invalid cleaned data:", processedData);
+          errorCount++;
+          continue;
+        }
 
         console.log(`Processing IPO: ${processedData.symbol} - LotSize: ${processedData.lotSize || 'not set'} - Series: ${processedData.series} - Status: ${processedData.status}`);        await ctx.runMutation(internal.ipos.upsertIpo, processedData);
         successCount++;
