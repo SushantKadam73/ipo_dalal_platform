@@ -50,13 +50,13 @@ export const sequentialFetch = internalAction({
 
 const crons = cronJobs();
 
-// Fetch NSE upcoming IPO data every 5 minutes
-crons.interval("fetch NSE IPO data", { minutes: 5 }, internal.nse.fetchNseData, {});
+// Fetch NSE upcoming IPO data every 1 hour
+crons.interval("fetch NSE IPO data", { minutes: 60 }, internal.nse.fetchNseData, {});
 
-// Fetch bid details for mainboard IPOs every 1 minute
-crons.interval("fetch bid details", { minutes: 1 }, internal.bidDetailsFetch.fetchAllBidDetails, {});
+// Fetch bid details for mainboard IPOs every 1 hour
+crons.interval("fetch bid details", { minutes: 60 }, internal.bidDetailsFetch.fetchAllBidDetails, {});
 
-// Fetch bid details for SME IPOs every 2 minutes
-crons.interval("fetch SME bid details", { minutes: 2 }, internal.bidDetailsFetchSME.fetchAllBidDetailsSME, {});
+// Fetch bid details for SME IPOs every 1 hour
+crons.interval("fetch SME bid details", { minutes: 60 }, internal.bidDetailsFetchSME.fetchAllBidDetailsSME, {});
 
 export default crons;
