@@ -14,12 +14,14 @@ import type {
   FunctionReference,
 } from "convex/server";
 import type * as auth from "../auth.js";
+import type * as bidDetails from "../bidDetails.js";
+import type * as bidDetailsFetch from "../bidDetailsFetch.js";
 import type * as crons from "../crons.js";
+import type * as debug from "../debug.js";
 import type * as http from "../http.js";
 import type * as ipos from "../ipos.js";
 import type * as nse from "../nse.js";
 import type * as router from "../router.js";
-import type * as sampleData from "../sampleData.js";
 
 /**
  * A utility for referencing Convex functions in your app's API.
@@ -31,12 +33,14 @@ import type * as sampleData from "../sampleData.js";
  */
 declare const fullApi: ApiFromModules<{
   auth: typeof auth;
+  bidDetails: typeof bidDetails;
+  bidDetailsFetch: typeof bidDetailsFetch;
   crons: typeof crons;
+  debug: typeof debug;
   http: typeof http;
   ipos: typeof ipos;
   nse: typeof nse;
   router: typeof router;
-  sampleData: typeof sampleData;
 }>;
 export declare const api: FilterApi<
   typeof fullApi,

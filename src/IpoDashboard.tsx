@@ -1,11 +1,15 @@
 import { useQuery, useAction } from "convex/react";
 import { api } from "../convex/_generated/api";
 import { useState } from "react";
+import React from "react";
+import { BidDetails } from "./components/BidDetails";
 
 export function IpoDashboard() {
   const [selectedStatus, setSelectedStatus] = useState<string>("");
   const [selectedSeries, setSelectedSeries] = useState<"EQ" | "SME" | "">("");
   const [isRefreshing, setIsRefreshing] = useState(false);
+  const [isRefreshingBids, setIsRefreshingBids] = useState(false);
+  const [expandedBidDetails, setExpandedBidDetails] = useState<string | null>(null);
   
   const ipos = useQuery(api.ipos.listIpos, {
     status: selectedStatus || undefined,
@@ -14,6 +18,8 @@ export function IpoDashboard() {
   
   const stats = useQuery(api.ipos.getIpoStats);
   const manualFetch = useAction(api.nse.manualFetchNseData);
+  const manualFetchBids = useAction(api.bidDetailsFetch.manualFetchBidDetails);
+  const debugStatuses = useAction(api.debug.debugIpoStatuses);
 
   const handleManualRefresh = async () => {
     setIsRefreshing(true);
@@ -25,6 +31,28 @@ export function IpoDashboard() {
       console.error("Manual fetch failed:", error);
     } finally {
       setIsRefreshing(false);
+    }
+  };
+
+  const handleManualBidRefresh = async () => {
+    setIsRefreshingBids(true);
+    try {
+      const result = await manualFetchBids({});
+      console.log("Manual bid fetch result:", result);
+      // You could show a toast notification here
+    } catch (error) {
+      console.error("Manual bid fetch failed:", error);
+    } finally {
+      setIsRefreshingBids(false);
+    }
+  };
+
+  const handleDebugStatuses = async () => {
+    try {
+      const result = await debugStatuses({});
+      console.log("Debug statuses result:", result);
+    } catch (error) {
+      console.error("Debug statuses failed:", error);
     }
   };
 
@@ -42,13 +70,26 @@ export function IpoDashboard() {
       <div className="text-center">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">IPO Dashboard</h1>
         <p className="text-gray-600">Real-time IPO data from NSE</p>
-        <div className="mt-4">
+        <div className="mt-4 space-x-2">
           <button
             onClick={handleManualRefresh}
             disabled={isRefreshing}
             className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
             {isRefreshing ? "Refreshing..." : "Refresh NSE Data"}
+          </button>
+          <button
+            onClick={handleManualBidRefresh}
+            disabled={isRefreshingBids}
+            className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          >
+            {isRefreshingBids ? "Refreshing..." : "Refresh Bid Details"}
+          </button>
+          <button
+            onClick={handleDebugStatuses}
+            className="px-4 py-2 bg-yellow-600 text-white rounded-md hover:bg-yellow-700 transition-colors"
+          >
+            Debug IPO Statuses
           </button>
         </div>
       </div>
@@ -143,11 +184,29 @@ export function IpoDashboard() {
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Status
                   </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Bid Details
+                  </th>
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
                 {ipos.map((ipo) => (
-                  <IpoRow key={ipo._id} ipo={ipo} />
+                  <React.Fragment key={ipo._id}>
+                    <IpoRow 
+                      ipo={ipo} 
+                      onToggleBidDetails={(symbol) => 
+                        setExpandedBidDetails(expandedBidDetails === symbol ? null : symbol)
+                      }
+                      showBidDetails={expandedBidDetails === ipo.symbol}
+                    />
+                    {expandedBidDetails === ipo.symbol && ipo.series === "EQ" && ipo.status.toLowerCase().includes("active") && (
+                      <tr>
+                        <td colSpan={8} className="px-6 py-4 bg-gray-50">
+                          <BidDetails symbol={ipo.symbol} companyName={ipo.companyName} />
+                        </td>
+                      </tr>
+                    )}
+                  </React.Fragment>
                 ))}
               </tbody>
             </table>
@@ -172,7 +231,11 @@ function StatCard({ title, value, color }: { title: string; value: number; color
   );
 }
 
-function IpoRow({ ipo }: { ipo: any }) {
+function IpoRow({ ipo, onToggleBidDetails, showBidDetails }: { 
+  ipo: any; 
+  onToggleBidDetails?: (symbol: string) => void; 
+  showBidDetails?: boolean; 
+}) {
   const getStatusColor = (status: string) => {
     const lowerStatus = status.toLowerCase();
     if (lowerStatus.includes("open")) return "bg-green-100 text-green-800";
@@ -217,6 +280,18 @@ function IpoRow({ ipo }: { ipo: any }) {
         </span>
         {ipo.isBse && (
           <div className="text-xs text-gray-500 mt-1">BSE: {ipo.isBse}</div>
+        )}
+      </td>
+      <td className="px-6 py-4 whitespace-nowrap text-center">
+        {ipo.series === "EQ" && ipo.status.toLowerCase().includes("active") && onToggleBidDetails ? (
+          <button
+            onClick={() => onToggleBidDetails(ipo.symbol)}
+            className="px-3 py-1 bg-blue-500 text-white text-xs rounded-md hover:bg-blue-600 transition-colors"
+          >
+            {showBidDetails ? "Hide" : "View"} Bids
+          </button>
+        ) : (
+          <span className="text-xs text-gray-400">N/A</span>
         )}
       </td>
     </tr>

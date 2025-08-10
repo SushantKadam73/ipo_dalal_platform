@@ -15,19 +15,20 @@ export const fetchAllBidDetails = internalAction({
   args: {},
   handler: async (ctx) => {
     try {
-      console.log("Starting bid details fetch for all mainboard IPOs...");
+      console.log("Starting bid details fetch for active mainboard IPOs...");
       
-      // Get all mainboard (EQ series) IPOs from the database
-      const mainboardIpos = await ctx.runQuery(internal.ipos.listIpos, {
-        series: "EQ"
+      // Get all mainboard (EQ series) IPOs with Active status from the database
+      const mainboardIpos = await ctx.runQuery(internal.ipos.listIposInternal, {
+        series: "EQ",
+        status: "Active"
       });
 
       if (!mainboardIpos || mainboardIpos.length === 0) {
-        console.log("No mainboard IPOs found to fetch bid details for");
+        console.log("No active mainboard IPOs found to fetch bid details for");
         return { success: true, count: 0, errors: 0 };
       }
 
-      console.log(`Found ${mainboardIpos.length} mainboard IPOs to process`);
+      console.log(`Found ${mainboardIpos.length} active mainboard IPOs to process`);
       
       let successCount = 0;
       let errorCount = 0;
@@ -74,104 +75,163 @@ export const fetchAllBidDetails = internalAction({
   },
 });
 
+// Helper function to extract and parse cookies from response headers
+function extractCookiesFromResponse(response: Response, existingCookies: string = ""): string {
+  const setCookieHeader = response.headers.get("set-cookie");
+  if (!setCookieHeader) return existingCookies;
+
+  // Parse all set-cookie headers more carefully
+  const cookieMap = new Map<string, string>();
+  
+  // Parse existing cookies
+  if (existingCookies) {
+    existingCookies.split(";").forEach(cookie => {
+      const [name, value] = cookie.trim().split("=");
+      if (name && value) {
+        cookieMap.set(name.trim(), value.trim());
+      }
+    });
+  }
+
+  // Parse new cookies from set-cookie header
+  // Handle multiple cookies separated by comma (but be careful with expires dates)
+  const cookieParts = setCookieHeader.split(/,(?=[^;]*=)/);
+  
+  for (const cookiePart of cookieParts) {
+    const cookieAttributes = cookiePart.split(";");
+    const nameValue = cookieAttributes[0].trim();
+    const [name, value] = nameValue.split("=");
+    
+    if (name && value) {
+      cookieMap.set(name.trim(), value.trim());
+    }
+  }
+
+  // Convert back to cookie string
+  return Array.from(cookieMap.entries()).map(([name, value]) => `${name}=${value}`).join("; ");
+}
+
+// Helper function to get randomized headers
+function getRandomizedHeaders(baseHeaders: Record<string, string>): Record<string, string> {
+  const userAgents = [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/121.0",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+  ];
+  
+  const acceptLanguages = [
+    "en-US,en;q=0.9",
+    "en-US,en;q=0.8,hi;q=0.7",
+    "en-GB,en;q=0.9,en-US;q=0.8",
+  ];
+
+  return {
+    ...baseHeaders,
+    "User-Agent": userAgents[Math.floor(Math.random() * userAgents.length)],
+    "Accept-Language": acceptLanguages[Math.floor(Math.random() * acceptLanguages.length)],
+  };
+}
+
 // Helper function to fetch bid details for a specific symbol
 async function fetchBidDetailsForSymbol(ctx: any, symbol: string, companyName: string, status: string) {
   try {
     console.log(`Fetching bid details for symbol: ${symbol}`);
+    let sessionCookies = "";
     
     // Step 1: Visit NSE India homepage first to establish initial session
     console.log("Step 1: Visiting NSE India homepage...");
+    const homepageHeaders = getRandomizedHeaders({
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "Accept-Encoding": "gzip, deflate, br",
+      "DNT": "1",
+      "Connection": "keep-alive",
+      "Upgrade-Insecure-Requests": "1",
+      "Sec-Fetch-Dest": "document",
+      "Sec-Fetch-Mode": "navigate",
+      "Sec-Fetch-Site": "none",
+      "Cache-Control": "no-cache",
+      "Pragma": "no-cache",
+    });
+
     const homepageResponse = await fetch("https://www.nseindia.com", {
       method: "GET",
-      headers: {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-        "Accept-Language": "en-US,en;q=0.9",
-        "Accept-Encoding": "gzip, deflate, br",
-        "DNT": "1",
-        "Connection": "keep-alive",
-        "Upgrade-Insecure-Requests": "1",
-        "Sec-Fetch-Dest": "document",
-        "Sec-Fetch-Mode": "navigate",
-        "Sec-Fetch-Site": "none",
-        "Cache-Control": "max-age=0",
-      },
+      headers: homepageHeaders,
     });
 
     console.log(`Homepage response status: ${homepageResponse.status}`);
     
-    // Extract cookies from homepage
-    let cookieString = "";
-    const homepageSetCookie = homepageResponse.headers.get("set-cookie");
-    if (homepageSetCookie) {
-      cookieString = homepageSetCookie
-        .split(",")
-        .map(cookie => cookie.split(";")[0].trim())
-        .join("; ");
+    if (!homepageResponse.ok) {
+      console.error(`Homepage request failed with status: ${homepageResponse.status}`);
+      return { success: false, error: `Homepage access failed: ${homepageResponse.status}`, count: 0 };
     }
 
-    // Step 2: Visit the IPO issue information page to establish proper context
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    // Extract cookies from homepage
+    sessionCookies = extractCookiesFromResponse(homepageResponse, sessionCookies);
+    console.log(`Extracted homepage cookies: ${sessionCookies ? 'Yes' : 'No'}`);
+
+    // Step 2: Visit the IPO issue information page directly to establish proper context
+    await new Promise(resolve => setTimeout(resolve, 2000 + Math.random() * 3000));
     
     console.log(`Step 2: Visiting issue information page for ${symbol}...`);
-    const issuePageUrl = `https://www.nseindia.com/market-data/issue-information?symbol=${symbol}&series=EQ&type=${encodeURIComponent(status)}`;
+    const issuePageUrl = `https://www.nseindia.com/market-data/issue-information?symbol=${symbol}&series=EQ&type=Active`;
     
+    const issuePageHeaders = getRandomizedHeaders({
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "Accept-Encoding": "gzip, deflate, br",
+      "DNT": "1",
+      "Connection": "keep-alive",
+      "Upgrade-Insecure-Requests": "1",
+      "Sec-Fetch-Dest": "document",
+      "Sec-Fetch-Mode": "navigate",
+      "Sec-Fetch-Site": "same-origin",
+      "Referer": "https://www.nseindia.com",
+      "Cache-Control": "no-cache",
+      "Pragma": "no-cache",
+      ...(sessionCookies && { "Cookie": sessionCookies }),
+    });
+
     const issuePageResponse = await fetch(issuePageUrl, {
       method: "GET",
-      headers: {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-        "Accept-Language": "en-US,en;q=0.9",
-        "Accept-Encoding": "gzip, deflate, br",
-        "DNT": "1",
-        "Connection": "keep-alive",
-        "Upgrade-Insecure-Requests": "1",
-        "Sec-Fetch-Dest": "document",
-        "Sec-Fetch-Mode": "navigate",
-        "Sec-Fetch-Site": "same-origin",
-        "Referer": "https://www.nseindia.com",
-        "Cache-Control": "max-age=0",
-        ...(cookieString && { "Cookie": cookieString }),
-      },
+      headers: issuePageHeaders,
     });
 
     console.log(`Issue page response status: ${issuePageResponse.status}`);
     
-    // Update cookies with any new ones from issue page
-    const issuePageSetCookie = issuePageResponse.headers.get("set-cookie");
-    if (issuePageSetCookie) {
-      const newCookies = issuePageSetCookie
-        .split(",")
-        .map(cookie => cookie.split(";")[0].trim())
-        .join("; ");
-      cookieString = cookieString ? `${cookieString}; ${newCookies}` : newCookies;
+    if (issuePageResponse.ok) {
+      sessionCookies = extractCookiesFromResponse(issuePageResponse, sessionCookies);
+      console.log(`Updated cookies after issue page: ${sessionCookies ? 'Yes' : 'No'}`);
+    } else {
+      console.error(`Issue page request failed with status: ${issuePageResponse.status}`);
     }
 
-    // Step 3: Wait and then call the bid details API
-    await new Promise(resolve => setTimeout(resolve, 3000));
+    // Step 3: Wait and then call the bid details API directly
+    await new Promise(resolve => setTimeout(resolve, 3000 + Math.random() * 2000));
 
     console.log(`Step 3: Calling bid details API for ${symbol}...`);
     const apiUrl = `https://www.nseindia.com/api/ipo-active-category?symbol=${symbol}`;
     
+    const apiHeaders = getRandomizedHeaders({
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "Accept-Encoding": "gzip, deflate, br",
+      "X-Requested-With": "XMLHttpRequest",
+      "DNT": "1",
+      "Connection": "keep-alive",
+      "Sec-Fetch-Dest": "empty",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Site": "same-origin",
+      "Referer": issuePageUrl,
+      "Cache-Control": "no-cache",
+      "Pragma": "no-cache",
+      "sec-ch-ua": '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"',
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": '"Windows"',
+      ...(sessionCookies && { "Cookie": sessionCookies }),
+    });
+
     const apiResponse = await fetch(apiUrl, {
       method: "GET",
-      headers: {
-        "Referer": issuePageUrl,
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "Accept": "application/json, text/javascript, */*; q=0.01",
-        "Accept-Language": "en-US,en;q=0.9",
-        "Accept-Encoding": "gzip, deflate, br",
-        "X-Requested-With": "XMLHttpRequest",
-        "DNT": "1",
-        "Connection": "keep-alive",
-        "Sec-Fetch-Dest": "empty",
-        "Sec-Fetch-Mode": "cors",
-        "Sec-Fetch-Site": "same-origin",
-        "sec-ch-ua": '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"',
-        "sec-ch-ua-mobile": "?0",
-        "sec-ch-ua-platform": '"Windows"',
-        ...(cookieString && { "Cookie": cookieString }),
-      },
+      headers: apiHeaders,
     });
 
     console.log(`Bid details API response status: ${apiResponse.status}`);

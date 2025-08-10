@@ -11,32 +11,6 @@ export const manualFetchNseData = action({
   },
 });
 
-// Manual function to insert specific IPO data
-export const insertSpecificIpo = action({
-  args: {},
-  handler: async (ctx) => {
-    try {
-      const mrilData = {
-        symbol: "MRIL",
-        companyName: "Mahendra Realtors & Infrastructure Limited",
-        series: "SME" as const,
-        issueStartDate: "12-Aug-2025",
-        issueEndDate: "14-Aug-2025",
-        status: "Forthcoming",
-        issueSize: "5817600",
-        issuePrice: "RS.75 to RS.85",
-        sr_no: 1,
-        lotSize: 1600, // Convert to number
-      };
-
-      await ctx.runMutation(internal.ipos.upsertIpo, mrilData);
-      return { success: true, message: "MRIL IPO inserted successfully" };
-    } catch (error) {
-      console.error("Failed to insert MRIL IPO:", error);
-      return { success: false, error: error instanceof Error ? error.message : "Unknown error" };
-    }
-  },
-});
 
 export const fetchNseData = internalAction({
   args: {},
@@ -236,9 +210,7 @@ async function processIpoData(ctx: any, ipoList: any) {
           })() : undefined,
         };
 
-  console.log(`Processing IPO: ${processedData.symbol} - LotSize: ${processedData.lotSize}`);
-
-        await ctx.runMutation(internal.ipos.upsertIpo, processedData);
+        console.log(`Processing IPO: ${processedData.symbol} - LotSize: ${processedData.lotSize || 'not set'} - Series: ${processedData.series} - Status: ${processedData.status}`);        await ctx.runMutation(internal.ipos.upsertIpo, processedData);
         successCount++;
       } catch (mutationError) {
         console.error("Error upserting IPO:", ipoData.symbol, mutationError);
