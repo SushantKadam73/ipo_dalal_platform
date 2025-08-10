@@ -1,0 +1,539 @@
+{
+  "companyName": "CONNPLEX",
+  "metaInfo": {
+
+  },
+  "bidDetails": [
+    {
+      "srNo": "1",
+      "category": "Qualified Institutional Buyers(QIBs)",
+      "noOfshareBid": "963200",
+      "noofapplication": "3"
+    },
+    {
+      "srNo": "1(a)",
+      "category": "Foreign Institutional Investors(FIIs)",
+      "noOfshareBid": "0",
+      "noofapplication": "0"
+    },
+    {
+      "srNo": "1(b)",
+      "category": "Domestic Financial Institutions(Banks/ Financial Institutions(FIs)/ Insurance Companies)",
+      "noOfshareBid": "0",
+      "noofapplication": "0"
+    },
+    {
+      "srNo": "1(c)",
+      "category": "Mutual funds",
+      "noOfshareBid": "0",
+      "noofapplication": "0"
+    },
+    {
+      "srNo": "1(d)",
+      "category": "Others",
+      "noOfshareBid": "963200",
+      "noofapplication": "3"
+    },
+    {
+      "srNo": "2",
+      "category": "Non Institutional Investors",
+      "noOfshareBid": "868800",
+      "noofapplication": "209"
+    },
+    {
+      "srNo": "2.1",
+      "category": "Non Institutional Investors(Bid amount of more than Ten Lakh Rupees)",
+      "noOfshareBid": "540800",
+      "noofapplication": "83"
+    },
+    {
+      "srNo": "2.1(a)",
+      "category": "Corporates",
+      "noOfshareBid": "0",
+      "noofapplication": "0"
+    },
+    {
+      "srNo": "2.1(b)",
+      "category": "Individuals(IND category bidding for more than 2 Lots)",
+      "noOfshareBid": "540800",
+      "noofapplication": "83"
+    },
+    {
+      "srNo": "2.1(c)",
+      "category": "Others",
+      "noOfshareBid": "0",
+      "noofapplication": "0"
+    },
+    {
+      "srNo": "2.2",
+      "category": "Non Institutional Investors(Bid amount of more than Two Lakh Rupees upto Ten Lakh Rupees)",
+      "noOfshareBid": "328000",
+      "noofapplication": "126"
+    },
+    {
+      "srNo": "2.2(a)",
+      "category": "Corporates",
+      "noOfshareBid": "8800",
+      "noofapplication": "3"
+    },
+    {
+      "srNo": "2.2(b)",
+      "category": "Individuals(IND category bidding for more than 2 Lots)",
+      "noOfshareBid": "316800",
+      "noofapplication": "122"
+    },
+    {
+      "srNo": "2.2(c)",
+      "category": "Others",
+      "noOfshareBid": "2400",
+      "noofapplication": "1"
+    },
+    {
+      "srNo": "3",
+      "category": "Individual Investors (IND category bidding for 2 Lots)",
+      "noOfshareBid": "4750400",
+      "noofapplication": "2969"
+    },
+    {
+      "srNo": null,
+      "category": "Total",
+      "noOfshareBid": "6582400",
+      "noofapplication": "3181"
+    }
+  ],
+  "issueInfo": {
+    "symbol": "CONNPLEX",
+    "heading": "Connplex Cinemas Limited",
+    "dataList": [
+      {
+        "title": "",
+        "value": "\"*As per SEBI circular no SEBI/HO/CFD/DIL2/CIR/P/2019/76 dated 28 June 2019 all are requested to comply with the provisions of the aforementioned circular which states as below: Intermediaries shall retain physical application forms submitted by retail individual investors with UPI as a payment mechanism, for a period of six months and thereafter forward the same to the issuer/ Registrar to Issue. However in case of Electronic forms printouts of such applications need not be retained or sent to the issuer. Intermediaries shall, at all times, maintain the electronic records relating to such forms for a minimum period of three years.\""
+      },
+      {
+        "title": "Symbol",
+        "value": "CONNPLEX"
+      },
+      {
+        "title": "Issue Period",
+        "value": "07-Aug-2025 to 11-Aug-2025"
+      },
+      {
+        "title": "Cut-off time for UPI Mandate Confirmation",
+        "value": "11-Aug-2025 (upto 5:00 PM) The cut-off time for UPI mandate acceptance is 05:00 PM on last day of IPO bidding. Further bids with confirmed status of mandate amount blocked (RC100) shall be considered as valid applications and hence investors are advised to submit their UPI applications in IPO well in advance to avoid any last minute technical/systemic constraints that may hamper their ability to participate in IPOs by successfully accepting the mandate."
+      },
+      {
+        "title": "Issue Size",
+        "value": "\"Initial Public Offer of upto 51,00,000 Equity Shares (including Market Maker portion of 2,56,000 Equity Shares and Anchor Allocation 14,52,000 Equity Shares)\""
+      },
+      {
+        "title": "Issue Type",
+        "value": "100 % Book Building"
+      },
+      {
+        "title": "Price Range",
+        "value": "Rs. 168/- to Rs. 177/- per equity share"
+      },
+      {
+        "title": "Face Value",
+        "value": "Rs.10"
+      },
+      {
+        "title": "Lot Size",
+        "value": "800 Equity Shares"
+      },
+      {
+        "title": "Tick Size",
+        "value": "Re.1"
+      },
+      {
+        "title": "IPO Market Timings",
+        "value": "10.00 a.m. to 5.00 p.m. (Bidding Timings on Issue Closure upto 4:00 P.M.)"
+      },
+      {
+        "title": "Maximum Bid Quantity for QIB Investors",
+        "value": "\"33,92,000 equity shares (Calculated at Higher Price band)\""
+      },
+      {
+        "title": "Maximum Bid Quantity for NIB Investors",
+        "value": "\"24,23,200 equity shares (Calculated at Higher Price band)\""
+      },
+      {
+        "title": "Book Running Lead Managers",
+        "value": "Beeline Capital Advisors Private Limited"
+      },
+      {
+        "title": "Sponsor Bank",
+        "value": "Axis Bank Limited"
+      },
+      {
+        "title": "Categories",
+        "value": "\"FI, IC, MF, FII, OTH, CO, IND and NOH\""
+      },
+      {
+        "title": "Sub-Categories applicable for UPI",
+        "value": "IND  (Up to Rs. 5 lacs)"
+      },
+      {
+        "title": "Name of the Registrar",
+        "value": "Mufg Intime India Private Limited"
+      },
+      {
+        "title": "Address of the Registrar",
+        "value": "\"C 101, 247 Park, Lal Bahadur Shastri Marg, Vikhroli (West), Mumbai 400 083, India\""
+      },
+      {
+        "title": "Contact person name number and Email id",
+        "value": "\"Mr. Shanti Gopalkrishnan, connplex.smeipo@linkintime.co.in, +91 8108114949\""
+      },
+      {
+        "title": "e-form link",
+        "value": "\u003Ca href=https://ipoforms.nseindia.com/issueforms/html/index.jsp target=new\u003Ee-Forms\u003C/a\u003E"
+      },
+      {
+        "title": "Branches of Self Certified Syndicate Banks (SCSBs) where syndicate / sub syndicate member to submit ASBA form",
+        "value": "\u003Ca href=http://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=35 target=new\u003ESCSB List\u003C/a\u003E"
+      },
+      {
+        "title": "Red Herring Prospectus",
+        "value": "https://nsearchives.nseindia.com/content/ipo/RHP_CONNPLEX.zip"
+      },
+      {
+        "title": "Ratios / Basis of Issue Price",
+        "value": "https://nsearchives.nseindia.com/content/ipo/RATIOS_CONNPLEX.zip"
+      },
+      {
+        "title": "Sample Application Forms",
+        "value": "https://nsearchives.nseindia.com/content/ipo/FORMS_CONNPLEX.zip"
+      },
+      {
+        "title": "Security Parameters ",
+        "value": "https://nsearchives.nseindia.com/content/ipo/PREANCHOR_PARAMETERS_CONNPLEX.zip"
+      },
+      {
+        "title": "Security Parameters (Post Anchor)",
+        "value": "https://nsearchives.nseindia.com/content/ipo/POSTANCHOR_PARAMETERS_CONNPLEX.zip"
+      },
+      {
+        "title": "Anchor Allocation Report",
+        "value": "https://nsearchives.nseindia.com/content/ipo/ANCHOR_CONNPLEX.zip"
+      },
+      {
+        "title": "Processing of ASBA Applications",
+        "value": "\u003Ca href=https://archives.nseindia.com/content/circulars/IPO53197.pdf target=new\u003ENSE Circular on ASBA Application Processing\u003C/a\u003E"
+      },
+      {
+        "title": "List of mobile applications accepting UPI as Payment Option",
+        "value": "\u003Ca href=https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=43 target=new\u003EMobile APP for UPI\u003C/a\u003E"
+      },
+      {
+        "title": "Video link  for UPI based ASBA process",
+        "value": "\u003Ca href=https://youtu.be/UJ394m2Q3rg target=new\u003EUPI Based ASBA Process\u003C/a\u003E"
+      },
+      {
+        "title": "Video link  for BHIM UPI Registration",
+        "value": "\u003Ca href=https://youtu.be/cIUJOIH0x4c target=new\u003EBHIM UPI Registration\u003C/a\u003E"
+      }
+    ]
+  },
+  "activeCat": {
+    "symbol": null,
+    "heading": null,
+    "updateTime": "Updated as on 08-Aug-2025 17:00:00",
+    "dataList": [
+      {
+        "srNo": "Sr.No.",
+        "category": "Category",
+        "noOfShareOffered": "No.of shares offered/reserved",
+        "noOfSharesBid": "No. of shares bid for",
+        "noOfTotalMeant": "No. of times of total meant for the category"
+      },
+      {
+        "srNo": "1",
+        "category": "Qualified Institutional Buyers(QIBs)",
+        "noOfShareOffered": "0",
+        "noOfSharesBid": "963200",
+        "noOfTotalMeant": "0.00"
+      },
+      {
+        "srNo": "1(a)",
+        "category": "Foreign Institutional Investors(FIIs)",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "0",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "1(b)",
+        "category": "Domestic Financial Institutions(Banks/ Financial Institutions(FIs)/ Insurance Companies)",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "0",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "1(c)",
+        "category": "Mutual funds",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "0",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "1(d)",
+        "category": "Others",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "963200",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2",
+        "category": "Non Institutional Investors",
+        "noOfShareOffered": "0",
+        "noOfSharesBid": "868800",
+        "noOfTotalMeant": "0.00"
+      },
+      {
+        "srNo": "2.1",
+        "category": "Non Institutional Investors(Bid amount of more than Ten Lakh Rupees)",
+        "noOfShareOffered": "0",
+        "noOfSharesBid": "540800",
+        "noOfTotalMeant": "0.00"
+      },
+      {
+        "srNo": "2.1(a)",
+        "category": "Corporates",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "0",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2.1(b)",
+        "category": "Individuals(Other than RIIs)",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "540800",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2.1(c)",
+        "category": "Others",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "0",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2.2",
+        "category": "Non Institutional Investors(Bid amount of more than Two Lakh Rupees upto Ten Lakh Rupees)",
+        "noOfShareOffered": "0",
+        "noOfSharesBid": "328000",
+        "noOfTotalMeant": "0.00"
+      },
+      {
+        "srNo": "2.2(a)",
+        "category": "Corporates",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "8800",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2.2(b)",
+        "category": "Individuals(Other than RIIs)",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "316800",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2.2(c)",
+        "category": "Others",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "2400",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": null,
+        "category": "Total",
+        "noOfShareOffered": "0.0",
+        "noOfSharesBid": "1832000.0",
+        "noOfTotalMeant": "0.00"
+      }
+    ]
+  },
+  "demandGraph": {
+    "noOfShare": "Cumulative Demand(no. of shares in lakhs)",
+    "note": " Cumulative (NSE) bid quantity at each price point includes the quantity (NSE) bidded at that relevant price point and all valid bids above that price point.",
+    "totalBidAtCutOff": "-",
+    "heading1": "Connplex Cinemas Limited- Graphical display of bids received *",
+    "TOTAL_BIDS": "6582400",
+    "totalIssueSize": "3648000",
+    "heading2": "(* indicates bids position and not necessarily the subscription to the issue)",
+    "plotData": {
+      "168": "65,82,400",
+      "169": "65,61,600",
+      "170": "65,56,800",
+      "171": "65,47,200",
+      "175": "65,45,600",
+      "177": "65,44,000"
+    },
+    "noOfTimesIssueSubscribed": "1.80",
+    "graphData": [
+      {
+        "type": "168",
+        "value": "0.208"
+      },
+      {
+        "type": "169",
+        "value": "0.048"
+      },
+      {
+        "type": "170",
+        "value": "0.096"
+      },
+      {
+        "type": "171",
+        "value": "0.016"
+      },
+      {
+        "type": "175",
+        "value": "0.016"
+      },
+      {
+        "type": "177",
+        "value": "65.44"
+      }
+    ],
+    "graphLogic": "https://nsearchives.nseindia.com/content/ipo/ipo_graph_logic.pdf",
+    "totalBidRecieved": "6582400",
+    "timestamp": "As on 08-Aug-2025 17:00:30 IST"
+  },
+  "demandDataNSE": [
+    {
+      "symbol": "CONNPLEX",
+      "company": "Connplex Cinemas Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "177",
+      "cumQty": "65,44,000"
+    },
+    {
+      "symbol": "CONNPLEX",
+      "company": "Connplex Cinemas Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "175",
+      "cumQty": "65,45,600"
+    },
+    {
+      "symbol": "CONNPLEX",
+      "company": "Connplex Cinemas Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "171",
+      "cumQty": "65,47,200"
+    },
+    {
+      "symbol": "CONNPLEX",
+      "company": "Connplex Cinemas Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "170",
+      "cumQty": "65,56,800"
+    },
+    {
+      "symbol": "CONNPLEX",
+      "company": "Connplex Cinemas Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "169",
+      "cumQty": "65,61,600"
+    },
+    {
+      "symbol": "CONNPLEX",
+      "company": "Connplex Cinemas Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "168",
+      "cumQty": "65,82,400"
+    }
+  ],
+  "demandDataBSE": [
+    {
+      "symbol": "CONNPLEX",
+      "company": "Connplex Cinemas Limited",
+      "timestamp": "08-AUG-2025 17:00:00",
+      "price": "177",
+      "cumQty": "65,44,000"
+    },
+    {
+      "symbol": "CONNPLEX",
+      "company": "Connplex Cinemas Limited",
+      "timestamp": "08-AUG-2025 17:00:00",
+      "price": "175",
+      "cumQty": "65,45,600"
+    },
+    {
+      "symbol": "CONNPLEX",
+      "company": "Connplex Cinemas Limited",
+      "timestamp": "08-AUG-2025 17:00:00",
+      "price": "171",
+      "cumQty": "65,47,200"
+    },
+    {
+      "symbol": "CONNPLEX",
+      "company": "Connplex Cinemas Limited",
+      "timestamp": "08-AUG-2025 17:00:00",
+      "price": "170",
+      "cumQty": "65,56,800"
+    },
+    {
+      "symbol": "CONNPLEX",
+      "company": "Connplex Cinemas Limited",
+      "timestamp": "08-AUG-2025 17:00:00",
+      "price": "169",
+      "cumQty": "65,61,600"
+    },
+    {
+      "symbol": "CONNPLEX",
+      "company": "Connplex Cinemas Limited",
+      "timestamp": "08-AUG-2025 17:00:00",
+      "price": "168",
+      "cumQty": "65,82,400"
+    }
+  ],
+  "demandGraphALL": {
+    "noOfShare": "Cumulative Demand(no. of shares in lakhs)",
+    "note": "Cumulative bid quantity at each price point includes the quantity bid at that relevant price point and all valid bids at the next higher price point.  The graph is updated every hour.",
+    "totalBidAtCutOff": "-",
+    "heading1": "Connplex Cinemas Limited- Graphical display of bids received *",
+    "TOTAL_BIDS": "6582400",
+    "totalIssueSize": "3648000",
+    "heading2": "(* indicates bids position and not necessarily the subscription to the issue)",
+    "plotData": {
+      "168": "65,82,400",
+      "169": "65,61,600",
+      "170": "65,56,800",
+      "171": "65,47,200",
+      "175": "65,45,600",
+      "177": "65,44,000"
+    },
+    "noOfTimesIssueSubscribed": "1.80",
+    "graphData": [
+      {
+        "type": "168",
+        "value": "0.208"
+      },
+      {
+        "type": "169",
+        "value": "0.048"
+      },
+      {
+        "type": "170",
+        "value": "0.096"
+      },
+      {
+        "type": "171",
+        "value": "0.016"
+      },
+      {
+        "type": "175",
+        "value": "0.016"
+      },
+      {
+        "type": "177",
+        "value": "65.44"
+      }
+    ],
+    "graphLogic": "https://nsearchives.nseindia.com/content/ipo/ipo_graph_logic.pdf",
+    "totalBidRecieved": "6582400",
+    "timestamp": "As on 08-Aug-2025 17:00:00 IST"
+  }
+}

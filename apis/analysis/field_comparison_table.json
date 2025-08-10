@@ -1,0 +1,209 @@
+{
+  "field_comparison": {
+    "top_level_fields": {
+      "companyName": {
+        "mainboard": "Present (string)",
+        "sme": "Present (string)",
+        "normalization_needed": false
+      },
+      "metaInfo": {
+        "mainboard": "Present (empty object)",
+        "sme": "Present (empty object)",
+        "normalization_needed": false,
+        "note": "Consider removing if always empty"
+      },
+      "bidDetails": {
+        "mainboard": "Present (array)",
+        "sme": "Present (array)",
+        "normalization_needed": true,
+        "differences": "Different field names and structure"
+      },
+      "issueInfo": {
+        "mainboard": "Present (object with dataList)",
+        "sme": "Present (object with heading and dataList)",
+        "normalization_needed": true,
+        "differences": "SME has additional 'heading' field"
+      },
+      "activeCat": {
+        "mainboard": "Present (object)",
+        "sme": "Present (object)",
+        "normalization_needed": false,
+        "note": "Structure is consistent"
+      },
+      "demandGraph": {
+        "mainboard": "Present (object)",
+        "sme": "Present (object)",
+        "normalization_needed": true,
+        "differences": "Different numeric formats"
+      },
+      "demandDataNSE": {
+        "mainboard": "Present (array)",
+        "sme": "Present (array)",
+        "normalization_needed": true,
+        "differences": "Comma-separated numbers need parsing"
+      },
+      "demandDataBSE": {
+        "mainboard": "Present (array)",
+        "sme": "Present (array)",
+        "normalization_needed": true,
+        "differences": "Timestamp format variations"
+      },
+      "demandGraphALL": {
+        "mainboard": "Present (object)",
+        "sme": "Present (object or error)",
+        "normalization_needed": true,
+        "differences": "SAWALIYA has error handling structure"
+      }
+    },
+    "bidDetails_fields": {
+      "srNo": {
+        "mainboard": "string or null",
+        "sme": "string or null",
+        "normalization_needed": false
+      },
+      "category": {
+        "mainboard": "string",
+        "sme": "string",
+        "normalization_needed": true,
+        "mapping_required": {
+          "mainboard_RII": "Retail Individual Investors(RIIs)",
+          "sme_equivalent": "Individual Investors (IND category bidding for 2 Lots)",
+          "mainboard_individual": "Individuals(Other than RIIs)",
+          "sme_individual": "Individuals(IND category bidding for more than 2 Lots)"
+        }
+      },
+      "noOfSharesOffered": {
+        "mainboard": "Present (string with scientific notation)",
+        "sme": "Not present in bidDetails",
+        "normalization_needed": true
+      },
+      "noOfsharesBid": {
+        "mainboard": "Present (lowercase 's')",
+        "sme": "Not present",
+        "normalization_needed": true
+      },
+      "noOfshareBid": {
+        "mainboard": "Not present",
+        "sme": "Present (no space in 'Of')",
+        "normalization_needed": true
+      },
+      "noOfTime": {
+        "mainboard": "Present (string, can be scientific notation)",
+        "sme": "Not present",
+        "normalization_needed": true
+      },
+      "noofapplication": {
+        "mainboard": "Not present",
+        "sme": "Present (string)",
+        "normalization_needed": true
+      }
+    },
+    "issueInfo_unique_fields": {
+      "mainboard_only": [
+        "Discount",
+        "Maximum Subscription Amount for Eligible Employee",
+        "Bidding Centers",
+        "Security Parameters (Pre Anchor)",
+        "Security Parameters (Post Anchor)",
+        "Remark"
+      ],
+      "sme_only": [
+        "heading (top-level in issueInfo)",
+        "Security Parameters (single field)",
+        "Lot Size (different format)"
+      ]
+    },
+    "category_structures": {
+      "mainboard_categories": [
+        "1 - Qualified Institutional Buyers(QIBs)",
+        "1(a) - Foreign Institutional Investors(FIIs)",
+        "1(b) - Domestic Financial Institutions",
+        "1(c) - Mutual funds",
+        "1(d) - Others",
+        "2 - Non Institutional Investors",
+        "2.1 - NIB (>10L)",
+        "2.1(a) - Corporates",
+        "2.1(b) - Individuals(Other than RIIs)",
+        "2.1(c) - Others",
+        "2.2 - NIB (2L-10L)",
+        "2.2(a) - Corporates",
+        "2.2(b) - Individuals(Other than RIIs)",
+        "2.2(c) - Others",
+        "3 - Retail Individual Investors(RIIs)",
+        "3(a) - Cut Off",
+        "3(b) - Price bids",
+        "4 - Employees (ALLTIME only)",
+        "4(a) - Cut Off",
+        "4(b) - Price Bids"
+      ],
+      "sme_categories": [
+        "1 - Qualified Institutional Buyers(QIBs)",
+        "1(a) - Foreign Institutional Investors(FIIs)",
+        "1(b) - Domestic Financial Institutions",
+        "1(c) - Mutual funds",
+        "1(d) - Others",
+        "2 - Non Institutional Investors",
+        "2.1 - NIB (>10L)",
+        "2.1(a) - Corporates",
+        "2.1(b) - Individuals(IND category bidding for more than 2 Lots)",
+        "2.1(c) - Others",
+        "2.2 - NIB (2L-10L)",
+        "2.2(a) - Corporates",
+        "2.2(b) - Individuals(IND category bidding for more than 2 Lots)",
+        "2.2(c) - Others",
+        "3 - Individual Investors (IND category bidding for 2 Lots)"
+      ]
+    },
+    "data_format_differences": {
+      "numeric_representation": {
+        "mainboard": {
+          "format": "Scientific notation for large/small numbers",
+          "examples": ["1.0546297E7", "7.690121990832886E-4"]
+        },
+        "sme": {
+          "format": "Standard numeric strings",
+          "examples": ["704800", "0.31"]
+        }
+      },
+      "comma_separated_numbers": {
+        "mainboard": "Present in plotData and cumQty",
+        "sme": "Present in plotData and cumQty",
+        "normalization_needed": true
+      },
+      "timestamp_formats": {
+        "mainboard": {
+          "NSE": "DD-MMM-YYYY HH:mm:ss",
+          "BSE": "DD-MMM-YYYY HH:mm:ss"
+        },
+        "sme": {
+          "NSE": "DD-MMM-YYYY HH:mm:ss",
+          "BSE": "DD-MMM-YYYY HH:mm:ss (uppercase month)"
+        }
+      }
+    },
+    "error_handling": {
+      "mainboard": "No error structures observed",
+      "sme": {
+        "SAWALIYA_demandGraphALL": {"msg": "error while fetching data"}
+      },
+      "normalization_needed": true
+    }
+  },
+  "normalization_priority": {
+    "high": [
+      "bidDetails field name standardization",
+      "Category name mapping",
+      "Numeric data type conversion"
+    ],
+    "medium": [
+      "issueInfo.dataList to dictionary conversion",
+      "Timestamp format standardization",
+      "Error handling structure"
+    ],
+    "low": [
+      "Remove empty metaInfo",
+      "HTML entity decoding",
+      "URL standardization"
+    ]
+  }
+}

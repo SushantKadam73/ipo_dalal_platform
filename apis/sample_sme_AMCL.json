@@ -1,0 +1,467 @@
+{
+  "companyName": "AMCL",
+  "metaInfo": {
+
+  },
+  "bidDetails": [
+    {
+      "srNo": "1",
+      "category": "Qualified Institutional Buyers(QIBs)",
+      "noOfshareBid": "224800",
+      "noofapplication": "1"
+    },
+    {
+      "srNo": "1(a)",
+      "category": "Foreign Institutional Investors(FIIs)",
+      "noOfshareBid": "0",
+      "noofapplication": "0"
+    },
+    {
+      "srNo": "1(b)",
+      "category": "Domestic Financial Institutions(Banks/ Financial Institutions(FIs)/ Insurance Companies)",
+      "noOfshareBid": "0",
+      "noofapplication": "0"
+    },
+    {
+      "srNo": "1(c)",
+      "category": "Mutual funds",
+      "noOfshareBid": "0",
+      "noofapplication": "0"
+    },
+    {
+      "srNo": "1(d)",
+      "category": "Others",
+      "noOfshareBid": "224800",
+      "noofapplication": "1"
+    },
+    {
+      "srNo": "2",
+      "category": "Non Institutional Investors",
+      "noOfshareBid": "187200",
+      "noofapplication": "29"
+    },
+    {
+      "srNo": "2.1",
+      "category": "Non Institutional Investors(Bid amount of more than Ten Lakh Rupees)",
+      "noOfshareBid": "108000",
+      "noofapplication": "8"
+    },
+    {
+      "srNo": "2.1(a)",
+      "category": "Corporates",
+      "noOfshareBid": "0",
+      "noofapplication": "0"
+    },
+    {
+      "srNo": "2.1(b)",
+      "category": "Individuals(IND category bidding for more than 2 Lots)",
+      "noOfshareBid": "108000",
+      "noofapplication": "8"
+    },
+    {
+      "srNo": "2.1(c)",
+      "category": "Others",
+      "noOfshareBid": "0",
+      "noofapplication": "0"
+    },
+    {
+      "srNo": "2.2",
+      "category": "Non Institutional Investors(Bid amount of more than Two Lakh Rupees upto Ten Lakh Rupees)",
+      "noOfshareBid": "79200",
+      "noofapplication": "21"
+    },
+    {
+      "srNo": "2.2(a)",
+      "category": "Corporates",
+      "noOfshareBid": "0",
+      "noofapplication": "0"
+    },
+    {
+      "srNo": "2.2(b)",
+      "category": "Individuals(IND category bidding for more than 2 Lots)",
+      "noOfshareBid": "79200",
+      "noofapplication": "21"
+    },
+    {
+      "srNo": "2.2(c)",
+      "category": "Others",
+      "noOfshareBid": "0",
+      "noofapplication": "0"
+    },
+    {
+      "srNo": "3",
+      "category": "Individual Investors (IND category bidding for 2 Lots)",
+      "noOfshareBid": "292800",
+      "noofapplication": "183"
+    },
+    {
+      "srNo": null,
+      "category": "Total",
+      "noOfshareBid": "704800",
+      "noofapplication": "213"
+    }
+  ],
+  "issueInfo": {
+    "symbol": "AMCL",
+    "heading": "ANB Metal Cast Limited",
+    "dataList": [
+      {
+        "title": "",
+        "value": "\"*As per SEBI circular no SEBI/HO/CFD/DIL2/CIR/P/2019/76 dated 28 June 2019 all are requested to comply with the provisions of the aforementioned circular which states as below: Intermediaries shall retain physical application forms submitted by retail individual investors with UPI as a payment mechanism, for a period of six months and thereafter forward the same to the issuer/ Registrar to Issue. However in case of Electronic forms printouts of such applications need not be retained or sent to the issuer. Intermediaries shall, at all times, maintain the electronic records relating to such forms for a minimum period of three years.\""
+      },
+      {
+        "title": "Symbol",
+        "value": "AMCL"
+      },
+      {
+        "title": "Issue Period",
+        "value": "08-Aug-2025 to 12-Aug-2025"
+      },
+      {
+        "title": "Cut-off time for UPI Mandate Confirmation",
+        "value": "12-Aug-2025 (upto 5:00 PM) The cut-off time for UPI mandate acceptance is 05:00 PM on last day of IPO bidding. Further bids with confirmed status of mandate amount blocked (RC100) shall be considered as valid applications and hence investors are advised to submit their UPI applications in IPO well in advance to avoid any last minute technical/systemic constraints that may hamper their ability to participate in IPOs by successfully accepting the mandate."
+      },
+      {
+        "title": "Issue Size",
+        "value": "\"Initial Public Offer of upto 32,00,000 Equity Shares (including Market Maker portion of 2,00,000 Equity Shares and Anchor Allocation 8,98,400 Equity Shares)\""
+      },
+      {
+        "title": "Issue Type",
+        "value": "100 % Book Building"
+      },
+      {
+        "title": "Price Range",
+        "value": "Rs.148 to Rs.156 per equity share"
+      },
+      {
+        "title": "Lot Size",
+        "value": "800 Equity Shares"
+      },
+      {
+        "title": "Face Value",
+        "value": "Rs.10"
+      },
+      {
+        "title": "Tick Size",
+        "value": "Re.1"
+      },
+      {
+        "title": "IPO Market Timings",
+        "value": "10.00 a.m. to 5.00 p.m. (Bidding Timings on Issue Closure upto 4:00 P.M.)"
+      },
+      {
+        "title": "Maximum Bid Quantity for QIB Investors",
+        "value": "\"21,01,600 equity shares (Calculated at Higher Price band)\""
+      },
+      {
+        "title": "Maximum Bid Quantity for NIB Investors",
+        "value": "\"15,02,400 equity shares (Calculated at Higher Price band)\""
+      },
+      {
+        "title": "Book Running Lead Managers",
+        "value": "Sun Capital Advisory Services Private Limited"
+      },
+      {
+        "title": "Sponsor Bank",
+        "value": "Kotak Mahindra Bank Limited"
+      },
+      {
+        "title": "Categories",
+        "value": "\"FI, IC, MF, FII, OTH, CO, IND and NOH\""
+      },
+      {
+        "title": "Sub-Categories applicable for UPI",
+        "value": "IND (upto 5 Lakhs)"
+      },
+      {
+        "title": "Name of the Registrar",
+        "value": "KFin Technologies Limited"
+      },
+      {
+        "title": "Address of the Registrar",
+        "value": "\"Selenium Tower-B, Plot 31 and 32, Gachibowli, Financial District, Nanakramguda, Serilingampally, Hyderabad - 500 032, Telangana\""
+      },
+      {
+        "title": "Contact person name number and Email id",
+        "value": "\"Mr. M Murali Krishna,+91 40 6716 2222,anb.ipo@kfintech.com\""
+      },
+      {
+        "title": "e-form link",
+        "value": "\u003Ca href=https://ipoforms.nseindia.com/issueforms/html/index.jsp target=new\u003Ee-Forms\u003C/a\u003E"
+      },
+      {
+        "title": "Branches of Self Certified Syndicate Banks (SCSBs) where syndicate / sub syndicate member to submit ASBA form",
+        "value": "\u003Ca href=http://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=35 target=new\u003ESCSB List\u003C/a\u003E"
+      },
+      {
+        "title": "Red Herring Prospectus",
+        "value": "https://nsearchives.nseindia.com/content/ipo/RHP_AMCL.zip"
+      },
+      {
+        "title": "Ratios / Basis of Issue Price",
+        "value": "https://nsearchives.nseindia.com/content/ipo/RATIOS_AMCL.zip"
+      },
+      {
+        "title": "Sample Application Forms",
+        "value": "https://nsearchives.nseindia.com/content/ipo/FORMS_AMCL.zip"
+      },
+      {
+        "title": "Security Parameters ",
+        "value": "https://nsearchives.nseindia.com/content/ipo/PREANCHOR_PARAMETERS_AMCL.zip"
+      },
+      {
+        "title": "Security Parameters (Post Anchor)",
+        "value": "https://nsearchives.nseindia.com/content/ipo/POSTANCHOR_PARAMETERS_AMCL.zip"
+      },
+      {
+        "title": "Anchor Allocation Report",
+        "value": "https://nsearchives.nseindia.com/content/ipo/ANCHOR_AMCL.zip"
+      },
+      {
+        "title": "Processing of ASBA Applications",
+        "value": "\u003Ca href=https://archives.nseindia.com/content/circulars/IPO53197.pdf target=new\u003ENSE Circular on ASBA Application Processing\u003C/a\u003E"
+      },
+      {
+        "title": "List of mobile applications accepting UPI as Payment Option",
+        "value": "\u003Ca href=https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=43 target=new\u003EMobile APP for UPI\u003C/a\u003E"
+      },
+      {
+        "title": "Video link  for UPI based ASBA process",
+        "value": "\u003Ca href=https://youtu.be/UJ394m2Q3rg target=new\u003EUPI Based ASBA Process\u003C/a\u003E"
+      },
+      {
+        "title": "Video link  for BHIM UPI Registration",
+        "value": "\u003Ca href=https://youtu.be/cIUJOIH0x4c target=new\u003EBHIM UPI Registration\u003C/a\u003E"
+      }
+    ]
+  },
+  "activeCat": {
+    "symbol": null,
+    "heading": null,
+    "updateTime": "Updated as on 08-Aug-2025 17:00:00",
+    "dataList": [
+      {
+        "srNo": "Sr.No.",
+        "category": "Category",
+        "noOfShareOffered": "No.of shares offered/reserved",
+        "noOfSharesBid": "No. of shares bid for",
+        "noOfTotalMeant": "No. of times of total meant for the category"
+      },
+      {
+        "srNo": "1",
+        "category": "Qualified Institutional Buyers(QIBs)",
+        "noOfShareOffered": "0",
+        "noOfSharesBid": "224800",
+        "noOfTotalMeant": "0.00"
+      },
+      {
+        "srNo": "1(a)",
+        "category": "Foreign Institutional Investors(FIIs)",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "0",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "1(b)",
+        "category": "Domestic Financial Institutions(Banks/ Financial Institutions(FIs)/ Insurance Companies)",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "0",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "1(c)",
+        "category": "Mutual funds",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "0",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "1(d)",
+        "category": "Others",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "224800",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2",
+        "category": "Non Institutional Investors",
+        "noOfShareOffered": "0",
+        "noOfSharesBid": "187200",
+        "noOfTotalMeant": "0.00"
+      },
+      {
+        "srNo": "2.1",
+        "category": "Non Institutional Investors(Bid amount of more than Ten Lakh Rupees)",
+        "noOfShareOffered": "0",
+        "noOfSharesBid": "108000",
+        "noOfTotalMeant": "0.00"
+      },
+      {
+        "srNo": "2.1(a)",
+        "category": "Corporates",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "0",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2.1(b)",
+        "category": "Individuals(Other than RIIs)",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "108000",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2.1(c)",
+        "category": "Others",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "0",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2.2",
+        "category": "Non Institutional Investors(Bid amount of more than Two Lakh Rupees upto Ten Lakh Rupees)",
+        "noOfShareOffered": "0",
+        "noOfSharesBid": "79200",
+        "noOfTotalMeant": "0.00"
+      },
+      {
+        "srNo": "2.2(a)",
+        "category": "Corporates",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "0",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2.2(b)",
+        "category": "Individuals(Other than RIIs)",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "79200",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2.2(c)",
+        "category": "Others",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "0",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": null,
+        "category": "Total",
+        "noOfShareOffered": "0.0",
+        "noOfSharesBid": "412000.0",
+        "noOfTotalMeant": "0.00"
+      }
+    ]
+  },
+  "demandGraph": {
+    "noOfShare": "Cumulative Demand(no. of shares in lakhs)",
+    "note": " Cumulative (NSE) bid quantity at each price point includes the quantity (NSE) bidded at that relevant price point and all valid bids above that price point.",
+    "totalBidAtCutOff": "-",
+    "heading1": "ANB Metal Cast Limited- Graphical display of bids received *",
+    "TOTAL_BIDS": "704800",
+    "totalIssueSize": "2301600",
+    "heading2": "(* indicates bids position and not necessarily the subscription to the issue)",
+    "plotData": {
+      "150": "7,04,800",
+      "155": "7,01,600",
+      "156": "7,00,000"
+    },
+    "noOfTimesIssueSubscribed": "0.31",
+    "graphData": [
+      {
+        "type": "150",
+        "value": "0.032"
+      },
+      {
+        "type": "155",
+        "value": "0.016"
+      },
+      {
+        "type": "156",
+        "value": "7"
+      }
+    ],
+    "graphLogic": "https://nsearchives.nseindia.com/content/ipo/ipo_graph_logic.pdf",
+    "totalBidRecieved": "704800",
+    "timestamp": "As on 08-Aug-2025 17:00:30 IST"
+  },
+  "demandDataNSE": [
+    {
+      "symbol": "AMCL",
+      "company": "ANB Metal Cast Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "156",
+      "cumQty": "7,00,000"
+    },
+    {
+      "symbol": "AMCL",
+      "company": "ANB Metal Cast Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "155",
+      "cumQty": "7,01,600"
+    },
+    {
+      "symbol": "AMCL",
+      "company": "ANB Metal Cast Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "150",
+      "cumQty": "7,04,800"
+    }
+  ],
+  "demandDataBSE": [
+    {
+      "symbol": "AMCL",
+      "company": "ANB Metal Cast Limited",
+      "timestamp": "08-AUG-2025 17:00:00",
+      "price": "156",
+      "cumQty": "7,00,000"
+    },
+    {
+      "symbol": "AMCL",
+      "company": "ANB Metal Cast Limited",
+      "timestamp": "08-AUG-2025 17:00:00",
+      "price": "155",
+      "cumQty": "7,01,600"
+    },
+    {
+      "symbol": "AMCL",
+      "company": "ANB Metal Cast Limited",
+      "timestamp": "08-AUG-2025 17:00:00",
+      "price": "150",
+      "cumQty": "7,04,800"
+    }
+  ],
+  "demandGraphALL": {
+    "noOfShare": "Cumulative Demand(no. of shares in lakhs)",
+    "note": "Cumulative bid quantity at each price point includes the quantity bid at that relevant price point and all valid bids at the next higher price point.  The graph is updated every hour.",
+    "totalBidAtCutOff": "-",
+    "heading1": "ANB Metal Cast Limited- Graphical display of bids received *",
+    "TOTAL_BIDS": "704800",
+    "totalIssueSize": "2301600",
+    "heading2": "(* indicates bids position and not necessarily the subscription to the issue)",
+    "plotData": {
+      "150": "7,04,800",
+      "155": "7,01,600",
+      "156": "7,00,000"
+    },
+    "noOfTimesIssueSubscribed": "0.31",
+    "graphData": [
+      {
+        "type": "150",
+        "value": "0.032"
+      },
+      {
+        "type": "155",
+        "value": "0.016"
+      },
+      {
+        "type": "156",
+        "value": "7"
+      }
+    ],
+    "graphLogic": "https://nsearchives.nseindia.com/content/ipo/ipo_graph_logic.pdf",
+    "totalBidRecieved": "704800",
+    "timestamp": "As on 08-Aug-2025 17:00:00 IST"
+  }
+}

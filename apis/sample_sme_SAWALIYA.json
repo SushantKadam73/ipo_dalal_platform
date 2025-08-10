@@ -1,0 +1,438 @@
+{
+  "companyName": "SAWALIYA",
+  "metaInfo": {
+
+  },
+  "bidDetails": [
+    {
+      "srNo": "1",
+      "category": "Qualified Institutional Buyers(QIBs)",
+      "noOfshareBid": "0",
+      "noofapplication": "0"
+    },
+    {
+      "srNo": "1(a)",
+      "category": "Foreign Institutional Investors(FIIs)",
+      "noOfshareBid": "0",
+      "noofapplication": "0"
+    },
+    {
+      "srNo": "1(b)",
+      "category": "Domestic Financial Institutions(Banks/ Financial Institutions(FIs)/ Insurance Companies)",
+      "noOfshareBid": "0",
+      "noofapplication": "0"
+    },
+    {
+      "srNo": "1(c)",
+      "category": "Mutual funds",
+      "noOfshareBid": "0",
+      "noofapplication": "0"
+    },
+    {
+      "srNo": "1(d)",
+      "category": "Others",
+      "noOfshareBid": "0",
+      "noofapplication": "0"
+    },
+    {
+      "srNo": "2",
+      "category": "Non Institutional Investors",
+      "noOfshareBid": "2918400",
+      "noofapplication": "103"
+    },
+    {
+      "srNo": "2.1",
+      "category": "Non Institutional Investors(Bid amount of more than Ten Lakh Rupees)",
+      "noOfshareBid": "2874000",
+      "noofapplication": "91"
+    },
+    {
+      "srNo": "2.1(a)",
+      "category": "Corporates",
+      "noOfshareBid": "165600",
+      "noofapplication": "2"
+    },
+    {
+      "srNo": "2.1(b)",
+      "category": "Individuals(IND category bidding for more than 2 Lots)",
+      "noOfshareBid": "2680800",
+      "noofapplication": "87"
+    },
+    {
+      "srNo": "2.1(c)",
+      "category": "Others",
+      "noOfshareBid": "27600",
+      "noofapplication": "2"
+    },
+    {
+      "srNo": "2.2",
+      "category": "Non Institutional Investors(Bid amount of more than Two Lakh Rupees upto Ten Lakh Rupees)",
+      "noOfshareBid": "44400",
+      "noofapplication": "12"
+    },
+    {
+      "srNo": "2.2(a)",
+      "category": "Corporates",
+      "noOfshareBid": "0",
+      "noofapplication": "0"
+    },
+    {
+      "srNo": "2.2(b)",
+      "category": "Individuals(IND category bidding for more than 2 Lots)",
+      "noOfshareBid": "44400",
+      "noofapplication": "12"
+    },
+    {
+      "srNo": "2.2(c)",
+      "category": "Others",
+      "noOfshareBid": "0",
+      "noofapplication": "0"
+    },
+    {
+      "srNo": "3",
+      "category": "Individual Investors (IND category bidding for 2 Lots)",
+      "noOfshareBid": "1984800",
+      "noofapplication": "827"
+    },
+    {
+      "srNo": null,
+      "category": "Total",
+      "noOfshareBid": "4903200",
+      "noofapplication": "930"
+    }
+  ],
+  "issueInfo": {
+    "symbol": "SAWALIYA",
+    "heading": "Sawaliya Food Products Limited",
+    "dataList": [
+      {
+        "title": "",
+        "value": "\"*As per SEBI circular no SEBI/HO/CFD/DIL2/CIR/P/2019/76 dated 28 June 2019 all are requested to comply with the provisions of the aforementioned circular which states as below: Intermediaries shall retain physical application forms submitted by retail individual investors with UPI as a payment mechanism, for a period of six months and thereafter forward the same to the issuer/ Registrar to Issue. However in case of Electronic forms printouts of such applications need not be retained or sent to the issuer. Intermediaries shall, at all times, maintain the electronic records relating to such forms for a minimum period of three years.\""
+      },
+      {
+        "title": "Symbol",
+        "value": "SAWALIYA "
+      },
+      {
+        "title": "Issue Period",
+        "value": "07-Aug-2025 to 11-Aug-2025"
+      },
+      {
+        "title": "Cut-off time for UPI Mandate Confirmation",
+        "value": "11-Aug-2025 (upto 5:00 PM) The cut-off time for UPI mandate acceptance is 05:00 PM on last day of IPO bidding. Further bids with confirmed status of mandate amount blocked (RC100) shall be considered as valid applications and hence investors are advised to submit their UPI applications in IPO well in advance to avoid any last minute technical/systemic constraints that may hamper their ability to participate in IPOs by successfully accepting the mandate."
+      },
+      {
+        "title": "Issue Size",
+        "value": "\"Initial Public Offer comprising of Fresh Issue aggregating to 26,02,800 Equity Shares and Offer for sale upto 3,00,000 Equity Shares including Market Maker portion of 1,46,400 Equity Shares and Anchor Allocation 8,19,600 Equity Shares\""
+      },
+      {
+        "title": "Issue Type",
+        "value": "100 % Book Building"
+      },
+      {
+        "title": "Price Range",
+        "value": "Rs.114 to Rs.120 per equity share"
+      },
+      {
+        "title": "Lot Size",
+        "value": "\"1,200 Equity Shares\""
+      },
+      {
+        "title": "Face Value",
+        "value": "Rs.10"
+      },
+      {
+        "title": "Tick Size",
+        "value": "Re.1"
+      },
+      {
+        "title": "IPO Market Timings",
+        "value": "10.00 a.m. to 5.00 p.m. (Bidding Timings on Issue Closure upto 4:00 P.M.)"
+      },
+      {
+        "title": "Maximum Bid Quantity for QIB Investors",
+        "value": "\"19,36,800 equity shares (Calculated at Higher Price band)\""
+      },
+      {
+        "title": "Maximum Bid Quantity for NIB Investors",
+        "value": "\"13,86,000 equity shares (Calculated at Higher Price band)\""
+      },
+      {
+        "title": "Book Running Lead Managers",
+        "value": "Unistone Capital Private Limited"
+      },
+      {
+        "title": "Sponsor Bank",
+        "value": "Kotak Mahindra Bank Limited"
+      },
+      {
+        "title": "Categories",
+        "value": "\"FI, IC, MF, FII, OTH, CO, IND and NOH\""
+      },
+      {
+        "title": "Sub-Categories applicable for UPI",
+        "value": "IND (upto 5 Lakhs)"
+      },
+      {
+        "title": "Name of the Registrar",
+        "value": "Skyline Financial Services Private Limited"
+      },
+      {
+        "title": "Address of the Registrar",
+        "value": "\"D-153 A, 1st Floor, Okhla Industrial Area, Phase-I, New Delhi  110 020, Delhi, India.\""
+      },
+      {
+        "title": "Contact person name number and Email id",
+        "value": "\"Anuj Rana,+91 011 2681 2683,bhadora.ipo@skylinerta.com \""
+      },
+      {
+        "title": "e-form link",
+        "value": "\u003Ca href=https://ipoforms.nseindia.com/issueforms/html/index.jsp target=new\u003Ee-Forms\u003C/a\u003E"
+      },
+      {
+        "title": "Branches of Self Certified Syndicate Banks (SCSBs) where syndicate / sub syndicate member to submit ASBA form",
+        "value": "\u003Ca href=http://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=35 target=new\u003ESCSB List\u003C/a\u003E"
+      },
+      {
+        "title": "Red Herring Prospectus",
+        "value": "https://nsearchives.nseindia.com/content/ipo/RHP_SAWALIYA .zip"
+      },
+      {
+        "title": "Ratios / Basis of Issue Price",
+        "value": "https://nsearchives.nseindia.com/content/ipo/RATIOS_SAWALIYA .zip"
+      },
+      {
+        "title": "Sample Application Forms",
+        "value": "https://nsearchives.nseindia.com/content/ipo/FORMS_SAWALIYA .zip"
+      },
+      {
+        "title": "Security Parameters ",
+        "value": "https://nsearchives.nseindia.com/content/ipo/PREANCHOR_PARAMETERS_SAWALIYA.zip"
+      },
+      {
+        "title": "Security Parameters (Post Anchor)",
+        "value": "https://nsearchives.nseindia.com/content/ipo/POSTANCHOR_PARAMETERS_SAWALIYA.zip"
+      },
+      {
+        "title": "Anchor Allocation Report",
+        "value": "https://nsearchives.nseindia.com/content/ipo/ANCHOR_SAWALIYA.zip"
+      },
+      {
+        "title": "Processing of ASBA Applications",
+        "value": "\u003Ca href=https://archives.nseindia.com/content/circulars/IPO53197.pdf target=new\u003ENSE Circular on ASBA Application Processing\u003C/a\u003E"
+      },
+      {
+        "title": "List of mobile applications accepting UPI as Payment Option",
+        "value": "\u003Ca href=https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=43 target=new\u003EMobile APP for UPI\u003C/a\u003E"
+      },
+      {
+        "title": "Video link  for UPI based ASBA process",
+        "value": "\u003Ca href=https://youtu.be/UJ394m2Q3rg target=new\u003EUPI Based ASBA Process\u003C/a\u003E"
+      },
+      {
+        "title": "Video link  for BHIM UPI Registration",
+        "value": "\u003Ca href=https://youtu.be/cIUJOIH0x4c target=new\u003EBHIM UPI Registration\u003C/a\u003E"
+      }
+    ]
+  },
+  "activeCat": {
+    "symbol": null,
+    "heading": null,
+    "updateTime": "Updated as on 08-Aug-2025 17:00:00",
+    "dataList": [
+      {
+        "srNo": "Sr.No.",
+        "category": "Category",
+        "noOfShareOffered": "No.of shares offered/reserved",
+        "noOfSharesBid": "No. of shares bid for",
+        "noOfTotalMeant": "No. of times of total meant for the category"
+      },
+      {
+        "srNo": "1",
+        "category": "Qualified Institutional Buyers(QIBs)",
+        "noOfShareOffered": "0",
+        "noOfSharesBid": "0",
+        "noOfTotalMeant": "0.00"
+      },
+      {
+        "srNo": "1(a)",
+        "category": "Foreign Institutional Investors(FIIs)",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "0",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "1(b)",
+        "category": "Domestic Financial Institutions(Banks/ Financial Institutions(FIs)/ Insurance Companies)",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "0",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "1(c)",
+        "category": "Mutual funds",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "0",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "1(d)",
+        "category": "Others",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "0",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2",
+        "category": "Non Institutional Investors",
+        "noOfShareOffered": "0",
+        "noOfSharesBid": "2918400",
+        "noOfTotalMeant": "0.00"
+      },
+      {
+        "srNo": "2.1",
+        "category": "Non Institutional Investors(Bid amount of more than Ten Lakh Rupees)",
+        "noOfShareOffered": "0",
+        "noOfSharesBid": "2874000",
+        "noOfTotalMeant": "0.00"
+      },
+      {
+        "srNo": "2.1(a)",
+        "category": "Corporates",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "165600",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2.1(b)",
+        "category": "Individuals(Other than RIIs)",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "2680800",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2.1(c)",
+        "category": "Others",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "27600",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2.2",
+        "category": "Non Institutional Investors(Bid amount of more than Two Lakh Rupees upto Ten Lakh Rupees)",
+        "noOfShareOffered": "0",
+        "noOfSharesBid": "44400",
+        "noOfTotalMeant": "0.00"
+      },
+      {
+        "srNo": "2.2(a)",
+        "category": "Corporates",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "0",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2.2(b)",
+        "category": "Individuals(Other than RIIs)",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "44400",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2.2(c)",
+        "category": "Others",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "0",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": null,
+        "category": "Total",
+        "noOfShareOffered": "0.0",
+        "noOfSharesBid": "2918400.0",
+        "noOfTotalMeant": "0.00"
+      }
+    ]
+  },
+  "demandGraph": {
+    "noOfShare": "Cumulative Demand(no. of shares in lakhs)",
+    "note": " Cumulative (NSE) bid quantity at each price point includes the quantity (NSE) bidded at that relevant price point and all valid bids above that price point.",
+    "totalBidAtCutOff": "-",
+    "heading1": "Sawaliya Food Products Limited- Graphical display of bids received *",
+    "TOTAL_BIDS": "4903200",
+    "totalIssueSize": "2083200",
+    "heading2": "(* indicates bids position and not necessarily the subscription to the issue)",
+    "plotData": {
+      "114": "49,03,200",
+      "115": "48,69,600",
+      "120": "48,62,400"
+    },
+    "noOfTimesIssueSubscribed": "2.35",
+    "graphData": [
+      {
+        "type": "114",
+        "value": "0.336"
+      },
+      {
+        "type": "115",
+        "value": "0.072"
+      },
+      {
+        "type": "120",
+        "value": "48.624"
+      }
+    ],
+    "graphLogic": "https://nsearchives.nseindia.com/content/ipo/ipo_graph_logic.pdf",
+    "totalBidRecieved": "4903200",
+    "timestamp": "As on 08-Aug-2025 17:00:30 IST"
+  },
+  "demandDataNSE": [
+    {
+      "symbol": "SAWALIYA",
+      "company": "Sawaliya Food Products Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "120",
+      "cumQty": "48,62,400"
+    },
+    {
+      "symbol": "SAWALIYA",
+      "company": "Sawaliya Food Products Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "115",
+      "cumQty": "48,69,600"
+    },
+    {
+      "symbol": "SAWALIYA",
+      "company": "Sawaliya Food Products Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "114",
+      "cumQty": "49,03,200"
+    }
+  ],
+  "demandDataBSE": [
+    {
+      "symbol": "SAWALIYA",
+      "company": "Sawaliya Food Products Limited",
+      "timestamp": "08-AUG-2025 17:00:00",
+      "price": "120",
+      "cumQty": "48,62,400"
+    },
+    {
+      "symbol": "SAWALIYA",
+      "company": "Sawaliya Food Products Limited",
+      "timestamp": "08-AUG-2025 17:00:00",
+      "price": "115",
+      "cumQty": "48,69,600"
+    },
+    {
+      "symbol": "SAWALIYA",
+      "company": "Sawaliya Food Products Limited",
+      "timestamp": "08-AUG-2025 17:00:00",
+      "price": "114",
+      "cumQty": "49,03,200"
+    }
+  ],
+  "demandGraphALL": {
+    "msg": "error while fetching data"
+  }
+}

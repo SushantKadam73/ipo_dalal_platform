@@ -1,0 +1,709 @@
+{
+  "companyName": "JSWCEMENT",
+  "metaInfo": {
+
+  },
+  "bidDetails": [
+    {
+      "srNo": "1",
+      "category": "Qualified Institutional Buyers(QIBs)",
+      "noOfSharesOffered": "51798561",
+      "noOfsharesBid": "752658",
+      "noOfTime": "0.014530480875713903"
+    },
+    {
+      "srNo": "1(a)",
+      "category": "Foreign Institutional Investors(FIIs)",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "663000",
+      "noOfTime": ""
+    },
+    {
+      "srNo": "1(b)",
+      "category": "Domestic Financial Institutions(Banks/ Financial Institutions(FIs)/ Insurance Companies)",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "36312",
+      "noOfTime": ""
+    },
+    {
+      "srNo": "1(c)",
+      "category": "Mutual funds",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "0",
+      "noOfTime": ""
+    },
+    {
+      "srNo": "1(d)",
+      "category": "Others",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "53346",
+      "noOfTime": ""
+    },
+    {
+      "srNo": "2",
+      "category": "Non Institutional Investors",
+      "noOfSharesOffered": "38848921",
+      "noOfsharesBid": "12948492",
+      "noOfTime": "0.33330377438282005"
+    },
+    {
+      "srNo": "2.1",
+      "category": "Non Institutional Investors(Bid amount of more than Ten Lakh Rupees)",
+      "noOfSharesOffered": "25899281",
+      "noOfsharesBid": "7323702",
+      "noOfTime": "0.2827762670322779"
+    },
+    {
+      "srNo": "2.1(a)",
+      "category": "Corporates",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "147084",
+      "noOfTime": ""
+    },
+    {
+      "srNo": "2.1(b)",
+      "category": "Individuals(Other than RIIs)",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "6445788",
+      "noOfTime": ""
+    },
+    {
+      "srNo": "2.1(c)",
+      "category": "Others",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "730830",
+      "noOfTime": ""
+    },
+    {
+      "srNo": "2.2",
+      "category": "Non Institutional Investors(Bid amount of more than Two Lakh Rupees upto Ten Lakh Rupees)",
+      "noOfSharesOffered": "12949640",
+      "noOfsharesBid": "5624790",
+      "noOfTime": "0.434358792985751"
+    },
+    {
+      "srNo": "2.2(a)",
+      "category": "Corporates",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "74256",
+      "noOfTime": ""
+    },
+    {
+      "srNo": "2.2(b)",
+      "category": "Individuals(Other than RIIs)",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "5231886",
+      "noOfTime": ""
+    },
+    {
+      "srNo": "2.2(c)",
+      "category": "Others",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "318648",
+      "noOfTime": ""
+    },
+    {
+      "srNo": "3",
+      "category": "Retail Individual Investors(RIIs)",
+      "noOfSharesOffered": "90647482",
+      "noOfsharesBid": "26528670",
+      "noOfTime": "0.29265755004645355"
+    },
+    {
+      "srNo": "3(a)",
+      "category": "Cut Off",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "22084938",
+      "noOfTime": ""
+    },
+    {
+      "srNo": "3(b)",
+      "category": "Price bids",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "4443732",
+      "noOfTime": ""
+    },
+    {
+      "srNo": null,
+      "category": "Total",
+      "noOfSharesOffered": "1.81294964E8",
+      "noOfsharesBid": "4.022982E7",
+      "noOfTime": "0.2219025786066512"
+    }
+  ],
+  "issueInfo": {
+    "symbol": "JSWCEMENT",
+    "dataList": [
+      {
+        "title": "JSW Cement Limited",
+        "value": ""
+      },
+      {
+        "title": "",
+        "value": "\"*As per SEBI circular no SEBI/HO/CFD/DIL2/CIR/P/2019/76 dated 28 June 28 2019 all are requested to comply with the provisions of the aforementioned circular which states as below: Intermediaries shall retain physical application forms submitted by retail individual investors with UPI as a payment mechanism, for a period of six months and thereafter forward the same to the issuer/ Registrar to Issue. However in case of Electronic forms printouts of such applications need not be retained or sent to the issuer. Intermediaries shall at all times maintain the electronic records relating to such forms for a minimum period of three years.\""
+      },
+      {
+        "title": "Symbol",
+        "value": "JSWCEMENT"
+      },
+      {
+        "title": "Issue Period",
+        "value": "07-Aug-2025 to 11-Aug-2025"
+      },
+      {
+        "title": "Cut-off time for UPI Mandate Confirmation",
+        "value": "\"11-Aug-2025 (upto 5:00 PM) The new cut-off time for UPI mandate acceptance is 05:00 PM on last day of IPO bidding. Further bids with confirmed status of mandate amount blocked (RC100) shall be considered as valid applications and hence, investors are advised to submit their UPI applications in IPO well in advance to avoid any last minute technical/systemic constraints that may hamper their ability to participate in IPOs by successfully accepting the mandate.\""
+      },
+      {
+        "title": "Issue Size",
+        "value": "\"Initial Public Offer of Fresh Issue of up to Rs. 16000 million and Offer for sale of Rs. 20000 million (Including anchor portion of 7,34,69,386 Equity Shares)\""
+      },
+      {
+        "title": "Issue Type",
+        "value": "100% Book Building"
+      },
+      {
+        "title": "Price Range",
+        "value": "Rs. 139 to Rs. 147 per Equity Share"
+      },
+      {
+        "title": "Discount",
+        "value": "NA"
+      },
+      {
+        "title": "Face Value",
+        "value": "Re.10 per Equity Share"
+      },
+      {
+        "title": "Tick Size",
+        "value": "Re.1"
+      },
+      {
+        "title": "Bid Lot",
+        "value": "102 Equity Shares and in multiples thereof"
+      },
+      {
+        "title": "Minimum Order Quantity",
+        "value": "102 Equity Shares"
+      },
+      {
+        "title": "Maximum Subscription Amount for Retail Investor",
+        "value": "\"Rs. 2,00,000\""
+      },
+      {
+        "title": "Maximum Bid Quantity for QIB Investors",
+        "value": "\"18,12,94,902 equity shares in multiple of 102 Equity Shares (Calculated at lower Price band)\""
+      },
+      {
+        "title": "Maximum Bid Quantity for NIB Investors",
+        "value": "\"12,94,96,344 equity shares in multiple of 102 Equity Shares (Calculated at lower Price band)\""
+      },
+      {
+        "title": "IPO Market Timings",
+        "value": "10.00 a.m. to 5.00 p.m."
+      },
+      {
+        "title": "Book Running Lead Managers",
+        "value": "\"JM Financial Limited, Axis Capital Limited, Citigroup Global Markets India Private Limited, DAM Capital Advisors Limited, Goldman Sachs (India) Securities Private Limited, Jefferies India Private Limited, Kotak Mahindra Capital Company Limited and SBI Capital Markets Limited\""
+      },
+      {
+        "title": "Sponsor Bank",
+        "value": "Axis Bank Limited and Kotak Mahindra Bank Limited"
+      },
+      {
+        "title": "Categories",
+        "value": "\"FI, IC, MF, FII, OTH, CO, IND, NOH\""
+      },
+      {
+        "title": "JSW Cement Limited",
+        "value": "IND (upto 5 Lakhs)"
+      },
+      {
+        "title": "Name of the Registrar",
+        "value": "KFin Technologies Limited"
+      },
+      {
+        "title": "Address of the Registrar",
+        "value": "\"Selenium Tower B, Plot 31-32 Gachibowli, Financial District, Nanakramguda Hyderabad 500 032 Telangana, India\""
+      },
+      {
+        "title": "Contact person name number and Email id",
+        "value": "\"M. Murali Krishna, +91 40 6716 2222, jswcement.ipo@kfintech.co\""
+      },
+      {
+        "title": "e-form link",
+        "value": "\u003Ca href=https://ipoforms.nseindia.com/issueforms/html/index.jsp target=new\u003Ee-Forms\u003C/a\u003E"
+      },
+      {
+        "title": "Branches of Self Certified Syndicate Banks (SCSBs) where syndicate / sub syndicate member to submit ASBA form",
+        "value": "\u003Ca href=http://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=35 target=new\u003ESCSB List\u003C/a\u003E"
+      },
+      {
+        "title": "Ratios / Basis of Issue Price",
+        "value": "https://nsearchives.nseindia.com/content/ipo/RATIOS_JSWCEMENT.zip"
+      },
+      {
+        "title": "Red Herring Prospectus",
+        "value": "https://nsearchives.nseindia.com/content/ipo/RHP_JSWCEMENT.zip"
+      },
+      {
+        "title": "Bidding Centers",
+        "value": "https://nsearchives.nseindia.com/content/ipo/BIDDING_CENTRES_JSWCEMENT.zip"
+      },
+      {
+        "title": "Sample Application Forms",
+        "value": "https://nsearchives.nseindia.com/content/ipo/FORMS_JSWCEMENT.zip"
+      },
+      {
+        "title": "Security Parameters (Pre Anchor)",
+        "value": "https://nsearchives.nseindia.com/content/ipo/PREANCHOR_PARAMETERS_JSWCEMENT.zip"
+      },
+      {
+        "title": "Security Parameters (Post Anchor)",
+        "value": "https://nsearchives.nseindia.com/content/ipo/POSTANCHOR_PARAMETERS_JSWCEMENT.zip"
+      },
+      {
+        "title": "Anchor Allocation Report",
+        "value": "https://nsearchives.nseindia.com/content/ipo/ANCHOR_JSWCEMENT.zip"
+      },
+      {
+        "title": "Processing of ASBA Applications",
+        "value": "\u003Ca href=https://archives.nseindia.com/content/circulars/IPO53197.pdf target=new\u003ENSE Circular on ASBA Application Processing\u003C/a\u003E"
+      },
+      {
+        "title": "Remark",
+        "value": "\"The dedicated window provided for bid modification (modification of selected fields viz. DP ID/Client ID or Pan ID, Bank code and Location code) on T+1 day (T being last day of bidding) shall not be available now. The bid modification of selected fields shall be allowed during bidding period of IPO only.\""
+      },
+      {
+        "title": "List of mobile applications accepting UPI as Payment Option",
+        "value": "\u003Ca href=https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=43 target=new\u003EMobile APP for UPI\u003C/a\u003E"
+      },
+      {
+        "title": "Video link  for UPI based ASBA process",
+        "value": "\u003Ca href=https://youtu.be/UJ394m2Q3rg target=new\u003EUPI Based ASBA Process\u003C/a\u003E"
+      },
+      {
+        "title": "Video link  for BHIM UPI Registration",
+        "value": "\u003Ca href=https://youtu.be/cIUJOIH0x4c target=new\u003EBHIM UPI Registration\u003C/a\u003E"
+      }
+    ]
+  },
+  "activeCat": {
+    "symbol": null,
+    "heading": null,
+    "updateTime": "Updated as on 08-Aug-2025 17:00:00",
+    "dataList": [
+      {
+        "srNo": "Sr.No.",
+        "category": "Category",
+        "noOfShareOffered": "No.of shares offered/reserved",
+        "noOfSharesBid": "No. of shares bid for",
+        "noOfTotalMeant": "No. of times of total meant for the category"
+      },
+      {
+        "srNo": "1",
+        "category": "Qualified Institutional Buyers(QIBs)",
+        "noOfShareOffered": "51798561",
+        "noOfSharesBid": "12529272",
+        "noOfTotalMeant": "0.2418845573721633"
+      },
+      {
+        "srNo": "1(a)",
+        "category": "Foreign Institutional Investors(FIIs)",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "12319866",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "1(b)",
+        "category": "Domestic Financial Institutions(Banks/ Financial Institutions(FIs)/ Insurance Companies)",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "46614",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "1(c)",
+        "category": "Mutual funds",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "204",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "1(d)",
+        "category": "Others",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "173094",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2",
+        "category": "Non Institutional Investors",
+        "noOfShareOffered": "38848921",
+        "noOfSharesBid": "23962962",
+        "noOfTotalMeant": "0.6168243900519141"
+      },
+      {
+        "srNo": "2.1",
+        "category": "Non Institutional Investors(Bid amount of more than Ten Lakh Rupees)",
+        "noOfShareOffered": "25899281",
+        "noOfSharesBid": "11967354",
+        "noOfTotalMeant": "0.4620728274271398"
+      },
+      {
+        "srNo": "2.1(a)",
+        "category": "Corporates",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "293964",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2.1(b)",
+        "category": "Individuals(Other than RIIs)",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "10846170",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2.1(c)",
+        "category": "Others",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "827220",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2.2",
+        "category": "Non Institutional Investors(Bid amount of more than Two Lakh Rupees upto Ten Lakh Rupees)",
+        "noOfShareOffered": "12949640",
+        "noOfSharesBid": "11995608",
+        "noOfTotalMeant": "0.9263275272517228"
+      },
+      {
+        "srNo": "2.2(a)",
+        "category": "Corporates",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "134436",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2.2(b)",
+        "category": "Individuals(Other than RIIs)",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "11515698",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2.2(c)",
+        "category": "Others",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "345474",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "3",
+        "category": "Retail Individual Investors(RIIs)",
+        "noOfShareOffered": "90647482",
+        "noOfSharesBid": "65443404",
+        "noOfTotalMeant": "0.7219550124955484"
+      },
+      {
+        "srNo": "3(a)",
+        "category": "Cut Off",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "52810296",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "3(b)",
+        "category": "Price bids",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "12633108",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": null,
+        "category": "Total",
+        "noOfShareOffered": "1.81294964E8",
+        "noOfSharesBid": "1.01935638E8",
+        "noOfTotalMeant": "0.5622640350892483"
+      }
+    ]
+  },
+  "demandGraph": {
+    "noOfShare": "Cumulative Demand(no. of shares in lakhs)",
+    "note": "Cumulative (NSE) bid quantity at each price point includes the quantity (NSE) bidded at that relevant price point and all valid bids above that price point.",
+    "totalBidAtCutOff": "22084938",
+    "heading1": "JSW Cement Limited- Graphical display of bids received *",
+    "TOTAL_BIDS": "40229820",
+    "totalIssueSize": "181294964",
+    "heading2": "(* indicates bids position and not necessarily the subscription to the issue)",
+    "plotData": {
+      "139": "4,02,29,820",
+      "140": "4,01,22,414",
+      "141": "4,00,74,678",
+      "142": "4,00,62,540",
+      "143": "4,00,51,626",
+      "144": "4,00,45,404",
+      "145": "4,00,40,406",
+      "146": "4,00,16,742",
+      "147": "4,00,09,398",
+      "Cut-Off": "2,20,84,938"
+    },
+    "noOfTimesIssueSubscribed": "0.22",
+    "graphData": [
+      {
+        "type": "139",
+        "value": "1.074"
+      },
+      {
+        "type": "140",
+        "value": "0.477"
+      },
+      {
+        "type": "141",
+        "value": "0.121"
+      },
+      {
+        "type": "142",
+        "value": "0.109"
+      },
+      {
+        "type": "143",
+        "value": "0.062"
+      },
+      {
+        "type": "144",
+        "value": "0.05"
+      },
+      {
+        "type": "145",
+        "value": "0.237"
+      },
+      {
+        "type": "146",
+        "value": "0.073"
+      },
+      {
+        "type": "147",
+        "value": "179.245"
+      },
+      {
+        "type": "Cut-off",
+        "value": "220.849"
+      }
+    ],
+    "graphLogic": "https://nsearchives.nseindia.com/content/ipo/ipo_graph_logic.pdf",
+    "totalBidRecieved": "40229820",
+    "timestamp": "As on 08-Aug-2025 17:00:30 IST"
+  },
+  "demandDataNSE": [
+    {
+      "symbol": "JSWCEMENT",
+      "company": "JSW Cement Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "Cut-Off",
+      "cumQty": "2,20,84,938"
+    },
+    {
+      "symbol": "JSWCEMENT",
+      "company": "JSW Cement Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "147",
+      "cumQty": "4,00,09,398"
+    },
+    {
+      "symbol": "JSWCEMENT",
+      "company": "JSW Cement Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "146",
+      "cumQty": "4,00,16,742"
+    },
+    {
+      "symbol": "JSWCEMENT",
+      "company": "JSW Cement Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "145",
+      "cumQty": "4,00,40,406"
+    },
+    {
+      "symbol": "JSWCEMENT",
+      "company": "JSW Cement Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "144",
+      "cumQty": "4,00,45,404"
+    },
+    {
+      "symbol": "JSWCEMENT",
+      "company": "JSW Cement Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "143",
+      "cumQty": "4,00,51,626"
+    },
+    {
+      "symbol": "JSWCEMENT",
+      "company": "JSW Cement Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "142",
+      "cumQty": "4,00,62,540"
+    },
+    {
+      "symbol": "JSWCEMENT",
+      "company": "JSW Cement Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "141",
+      "cumQty": "4,00,74,678"
+    },
+    {
+      "symbol": "JSWCEMENT",
+      "company": "JSW Cement Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "140",
+      "cumQty": "4,01,22,414"
+    },
+    {
+      "symbol": "JSWCEMENT",
+      "company": "JSW Cement Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "139",
+      "cumQty": "4,02,29,820"
+    }
+  ],
+  "demandDataBSE": [
+    {
+      "symbol": "JSWCEMENT",
+      "company": "JSW Cement Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "Cut-Off",
+      "cumQty": "5,28,10,398"
+    },
+    {
+      "symbol": "JSWCEMENT",
+      "company": "JSW Cement Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "147",
+      "cumQty": "10,15,87,614"
+    },
+    {
+      "symbol": "JSWCEMENT",
+      "company": "JSW Cement Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "146",
+      "cumQty": "10,16,42,694"
+    },
+    {
+      "symbol": "JSWCEMENT",
+      "company": "JSW Cement Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "145",
+      "cumQty": "10,17,89,778"
+    },
+    {
+      "symbol": "JSWCEMENT",
+      "company": "JSW Cement Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "144",
+      "cumQty": "10,18,25,070"
+    },
+    {
+      "symbol": "JSWCEMENT",
+      "company": "JSW Cement Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "143",
+      "cumQty": "10,18,62,912"
+    },
+    {
+      "symbol": "JSWCEMENT",
+      "company": "JSW Cement Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "142",
+      "cumQty": "10,19,13,912"
+    },
+    {
+      "symbol": "JSWCEMENT",
+      "company": "JSW Cement Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "141",
+      "cumQty": "10,19,49,306"
+    },
+    {
+      "symbol": "JSWCEMENT",
+      "company": "JSW Cement Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "140",
+      "cumQty": "10,21,12,302"
+    },
+    {
+      "symbol": "JSWCEMENT",
+      "company": "JSW Cement Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "139",
+      "cumQty": "10,23,74,340"
+    }
+  ],
+  "demandGraphALL": {
+    "noOfShare": "Cumulative Demand(no. of shares in lakhs)",
+    "note": "Cumulative bid quantity at each price point includes the quantity bid at that relevant price point and all valid bids at the next higher price point.  The graph is updated every hour.",
+    "totalBidAtCutOff": "52810398",
+    "heading1": "JSW Cement Limited- Graphical display of bids received *",
+    "TOTAL_BIDS": "102374340",
+    "totalIssueSize": "181294964",
+    "heading2": "(* indicates bids position and not necessarily the subscription to the issue)",
+    "plotData": {
+      "139": "10,23,74,340",
+      "140": "10,21,12,302",
+      "141": "10,19,49,306",
+      "142": "10,19,13,912",
+      "143": "10,18,62,912",
+      "144": "10,18,25,070",
+      "145": "10,17,89,778",
+      "146": "10,16,42,694",
+      "147": "10,15,87,614",
+      "Cut-Off": "5,28,10,398"
+    },
+    "noOfTimesIssueSubscribed": "0.56",
+    "graphData": [
+      {
+        "type": "139",
+        "value": "2.62"
+      },
+      {
+        "type": "140",
+        "value": "1.63"
+      },
+      {
+        "type": "141",
+        "value": "0.354"
+      },
+      {
+        "type": "142",
+        "value": "0.51"
+      },
+      {
+        "type": "143",
+        "value": "0.378"
+      },
+      {
+        "type": "144",
+        "value": "0.353"
+      },
+      {
+        "type": "145",
+        "value": "1.471"
+      },
+      {
+        "type": "146",
+        "value": "0.551"
+      },
+      {
+        "type": "147",
+        "value": "487.772"
+      },
+      {
+        "type": "Cut-off",
+        "value": "528.104"
+      }
+    ],
+    "graphLogic": "https://nsearchives.nseindia.com/content/ipo/ipo_graph_logic.pdf",
+    "totalBidRecieved": "102374340",
+    "timestamp": "As on 08-Aug-2025 17:00:00 IST"
+  }
+}

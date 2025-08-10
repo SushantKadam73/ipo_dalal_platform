@@ -1,0 +1,911 @@
+{
+  "companyName": "ALLTIME",
+  "metaInfo": {
+
+  },
+  "bidDetails": [
+    {
+      "srNo": "1",
+      "category": "Qualified Institutional Buyers(QIBs)",
+      "noOfSharesOffered": "2949238",
+      "noOfsharesBid": "2268",
+      "noOfTime": "7.690121990832886E-4"
+    },
+    {
+      "srNo": "1(a)",
+      "category": "Foreign Institutional Investors(FIIs)",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "0",
+      "noOfTime": ""
+    },
+    {
+      "srNo": "1(b)",
+      "category": "Domestic Financial Institutions(Banks/ Financial Institutions(FIs)/ Insurance Companies)",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "756",
+      "noOfTime": ""
+    },
+    {
+      "srNo": "1(c)",
+      "category": "Mutual funds",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "0",
+      "noOfTime": ""
+    },
+    {
+      "srNo": "1(d)",
+      "category": "Others",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "1512",
+      "noOfTime": ""
+    },
+    {
+      "srNo": "2",
+      "category": "Non Institutional Investors",
+      "noOfSharesOffered": "2268393",
+      "noOfsharesBid": "943218",
+      "noOfTime": "0.4158089008386113"
+    },
+    {
+      "srNo": "2.1",
+      "category": "Non Institutional Investors(Bid amount of more than Ten Lakh Rupees)",
+      "noOfSharesOffered": "1512262",
+      "noOfsharesBid": "443232",
+      "noOfTime": "0.2930920700249031"
+    },
+    {
+      "srNo": "2.1(a)",
+      "category": "Corporates",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "3672",
+      "noOfTime": ""
+    },
+    {
+      "srNo": "2.1(b)",
+      "category": "Individuals(Other than RIIs)",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "401598",
+      "noOfTime": ""
+    },
+    {
+      "srNo": "2.1(c)",
+      "category": "Others",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "37962",
+      "noOfTime": ""
+    },
+    {
+      "srNo": "2.2",
+      "category": "Non Institutional Investors(Bid amount of more than Two Lakh Rupees upto Ten Lakh Rupees)",
+      "noOfSharesOffered": "756131",
+      "noOfsharesBid": "499986",
+      "noOfTime": "0.6612425624660278"
+    },
+    {
+      "srNo": "2.2(a)",
+      "category": "Corporates",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "2592",
+      "noOfTime": ""
+    },
+    {
+      "srNo": "2.2(b)",
+      "category": "Individuals(Other than RIIs)",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "478494",
+      "noOfTime": ""
+    },
+    {
+      "srNo": "2.2(c)",
+      "category": "Others",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "18900",
+      "noOfTime": ""
+    },
+    {
+      "srNo": "3",
+      "category": "Retail Individual Investors(RIIs)",
+      "noOfSharesOffered": "5292916",
+      "noOfsharesBid": "4298454",
+      "noOfTime": "0.8121145319517634"
+    },
+    {
+      "srNo": "3(a)",
+      "category": "Cut Off",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "3482460",
+      "noOfTime": ""
+    },
+    {
+      "srNo": "3(b)",
+      "category": "Price bids",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "815994",
+      "noOfTime": ""
+    },
+    {
+      "srNo": "4",
+      "category": "Employees",
+      "noOfSharesOffered": "35750",
+      "noOfsharesBid": "59886",
+      "noOfTime": "1.6751328671328671"
+    },
+    {
+      "srNo": "4(a)",
+      "category": "Cut Off",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "50166",
+      "noOfTime": ""
+    },
+    {
+      "srNo": "4(b)",
+      "category": "Price Bids",
+      "noOfSharesOffered": "",
+      "noOfsharesBid": "9720",
+      "noOfTime": ""
+    },
+    {
+      "srNo": null,
+      "category": "Total",
+      "noOfSharesOffered": "1.0546297E7",
+      "noOfsharesBid": "5303826.0",
+      "noOfTime": "0.5029088408945813"
+    }
+  ],
+  "issueInfo": {
+    "symbol": "ALLTIME",
+    "dataList": [
+      {
+        "title": "All Time Plastics Limited",
+        "value": ""
+      },
+      {
+        "title": "",
+        "value": "\"*As per SEBI circular no SEBI/HO/CFD/DIL2/CIR/P/2019/76 dated 28 June 28 2019 all are requested to comply with the provisions of the aforementioned circular which states as below: Intermediaries shall retain physical application forms submitted by retail individual investors with UPI as a payment mechanism, for a period of six months and thereafter forward the same to the issuer/ Registrar to Issue. However in case of Electronic forms printouts of such applications need not be retained or sent to the issuer. Intermediaries shall at all times maintain the electronic records relating to such forms for a minimum period of three years.\""
+      },
+      {
+        "title": "Symbol",
+        "value": "ALLTIME"
+      },
+      {
+        "title": "Issue Period",
+        "value": "07-Aug-2025 to 11-Aug-2025"
+      },
+      {
+        "title": "Cut-off time for UPI Mandate Confirmation",
+        "value": "\"11-Aug-2025 (upto 5:00 PM) The new cut-off time for UPI mandate acceptance is 05:00 PM on last day of IPO bidding. Further bids with confirmed status of mandate amount blocked (RC100) shall be considered as valid applications and hence, investors are advised to submit their UPI applications in IPO well in advance to avoid any last minute technical/systemic constraints that may hamper their ability to participate in IPOs by successfully accepting the mandate.\""
+      },
+      {
+        "title": "Issue Size",
+        "value": "\"Initial Public Offer of Fresh Issue of up to Rs. 2,800.00 million and Offer for sale of up to 4,385,562 Equity Shares (Including anchor investor portion of 43,60,502 Equity Shares)\""
+      },
+      {
+        "title": "Issue Type",
+        "value": "100% Book Building"
+      },
+      {
+        "title": "Price Range",
+        "value": "Rs. 260 to Rs. 275 per Equity Share"
+      },
+      {
+        "title": "Discount",
+        "value": "Rs. 26 per equity share to Eligible Employees"
+      },
+      {
+        "title": "Face Value",
+        "value": "Rs.2 per Equity Share"
+      },
+      {
+        "title": "Tick Size",
+        "value": "Re.1"
+      },
+      {
+        "title": "Bid Lot",
+        "value": "54 Equity shares and in multiples thereof"
+      },
+      {
+        "title": "Minimum Order Quantity",
+        "value": "54 Equity Shares"
+      },
+      {
+        "title": "Maximum Subscription Amount for Retail Investor",
+        "value": "\"Rs. 2,00,000\""
+      },
+      {
+        "title": "Maximum Subscription Amount for Eligible Employee",
+        "value": "\"Rs. 5,00,000\""
+      },
+      {
+        "title": "Maximum Bid Quantity for QIB Investors",
+        "value": "\"10,510,506 equity shares in multiple of 54 Equity Shares (Calculated at Lower Price band)\""
+      },
+      {
+        "title": "Maximum Bid Quantity for NIB Investors",
+        "value": "\"7,561,296 equity shares in multiple of 54 Equity Shares (Calculated at Lower Price band)\""
+      },
+      {
+        "title": "IPO Market Timings",
+        "value": "10.00 a.m. to 5.00 p.m."
+      },
+      {
+        "title": "Book Running Lead Managers",
+        "value": "Intensive Fiscal Services Private Limited and DAM Capital Advisors Limited"
+      },
+      {
+        "title": "Sponsor Bank",
+        "value": "Axis Bank Limited and ICICI Bank Limited"
+      },
+      {
+        "title": "Categories",
+        "value": "\"FI, IC, MF, FII, OTH, CO, IND, NOH, and EMP\""
+      },
+      {
+        "title": "Sub-Categories applicable for UPI",
+        "value": "IND and EMP (upto 5 Lakhs)"
+      },
+      {
+        "title": "Name of the Registrar",
+        "value": "KFin Technologies Limited"
+      },
+      {
+        "title": "Address of the Registrar",
+        "value": "\"Selenium Tower B, Plot 31-32 Gachibowli, Financial District, Nanakramguda Hyderabad 500 032 Telangana, India\""
+      },
+      {
+        "title": "Contact person name number and Email id",
+        "value": "\"M. Murali Krishna, Tel : (+91 40) 6716 2222, E-mail: atpl.ipo@kfintech.com\""
+      },
+      {
+        "title": "e-form link",
+        "value": "\u003Ca href=https://ipoforms.nseindia.com/issueforms/html/index.jsp target=new\u003Ee-Forms\u003C/a\u003E"
+      },
+      {
+        "title": "Branches of Self Certified Syndicate Banks (SCSBs) where syndicate / sub syndicate member to submit ASBA form",
+        "value": "\u003Ca href=http://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=35 target=new\u003ESCSB List\u003C/a\u003E"
+      },
+      {
+        "title": "Ratios / Basis of Issue Price",
+        "value": "https://nsearchives.nseindia.com/content/ipo/RATIOS_ALLTIME.zip"
+      },
+      {
+        "title": "Red Herring Prospectus",
+        "value": "https://nsearchives.nseindia.com/content/ipo/RHP_ALLTIME.zip"
+      },
+      {
+        "title": "Bidding Centers",
+        "value": "https://nsearchives.nseindia.com/content/ipo/BIDDING_CENTERS_ALLTIME.zip"
+      },
+      {
+        "title": "Sample Application Forms",
+        "value": "https://nsearchives.nseindia.com/content/ipo/FORMS_ALLTIME.zip"
+      },
+      {
+        "title": "Security Parameters (Pre Anchor)",
+        "value": "https://nsearchives.nseindia.com/content/ipo/PREANCHOR_PARAMETERS_ALLTIME.zip"
+      },
+      {
+        "title": "Security Parameters (Post Anchor)",
+        "value": "https://nsearchives.nseindia.com/content/ipo/POSTANCHOR_PARAMETERS_ALLTIME.zip"
+      },
+      {
+        "title": "Anchor Allocation Report",
+        "value": "https://nsearchives.nseindia.com/content/ipo/ANCHOR_ALLTIME.zip"
+      },
+      {
+        "title": "Processing of ASBA Applications",
+        "value": "\u003Ca href=https://archives.nseindia.com/content/circulars/IPO53197.pdf target=new\u003ENSE Circular on ASBA Application Processing\u003C/a\u003E"
+      },
+      {
+        "title": "Remark",
+        "value": "\"The dedicated window provided for bid modification (modification of selected fields viz. DP ID/Client ID or Pan ID, Bank code and Location code) on T+1 day (T being last day of bidding) shall not be available now. The bid modification of selected fields shall be allowed during bidding period of IPO only.\""
+      },
+      {
+        "title": "List of mobile applications accepting UPI as Payment Option",
+        "value": "\u003Ca href=https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=43 target=new\u003EMobile APP for UPI\u003C/a\u003E"
+      },
+      {
+        "title": "Video link  for UPI based ASBA process",
+        "value": "\u003Ca href=https://youtu.be/UJ394m2Q3rg target=new\u003EUPI Based ASBA Process\u003C/a\u003E"
+      },
+      {
+        "title": "Video link  for BHIM UPI Registration",
+        "value": "\u003Ca href=https://youtu.be/cIUJOIH0x4c target=new\u003EBHIM UPI Registration\u003C/a\u003E"
+      }
+    ]
+  },
+  "activeCat": {
+    "symbol": null,
+    "heading": null,
+    "updateTime": "Updated as on 08-Aug-2025 17:00:00",
+    "dataList": [
+      {
+        "srNo": "Sr.No.",
+        "category": "Category",
+        "noOfShareOffered": "No.of shares offered/reserved",
+        "noOfSharesBid": "No. of shares bid for",
+        "noOfTotalMeant": "No. of times of total meant for the category"
+      },
+      {
+        "srNo": "1",
+        "category": "Qualified Institutional Buyers(QIBs)",
+        "noOfShareOffered": "2949238",
+        "noOfSharesBid": "1105164",
+        "noOfTotalMeant": "0.3747286587247282"
+      },
+      {
+        "srNo": "1(a)",
+        "category": "Foreign Institutional Investors(FIIs)",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "1090908",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "1(b)",
+        "category": "Domestic Financial Institutions(Banks/ Financial Institutions(FIs)/ Insurance Companies)",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "756",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "1(c)",
+        "category": "Mutual funds",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "0",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "1(d)",
+        "category": "Others",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "13500",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2",
+        "category": "Non Institutional Investors",
+        "noOfShareOffered": "2268393",
+        "noOfSharesBid": "1919322",
+        "noOfTotalMeant": "0.8461152895463881"
+      },
+      {
+        "srNo": "2.1",
+        "category": "Non Institutional Investors(Bid amount of more than Ten Lakh Rupees)",
+        "noOfShareOffered": "1512262",
+        "noOfSharesBid": "910170",
+        "noOfTotalMeant": "0.6018599951595689"
+      },
+      {
+        "srNo": "2.1(a)",
+        "category": "Corporates",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "11016",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2.1(b)",
+        "category": "Individuals(Other than RIIs)",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "846504",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2.1(c)",
+        "category": "Others",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "52650",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2.2",
+        "category": "Non Institutional Investors(Bid amount of more than Two Lakh Rupees upto Ten Lakh Rupees)",
+        "noOfShareOffered": "756131",
+        "noOfSharesBid": "1009152",
+        "noOfTotalMeant": "1.3346258783200267"
+      },
+      {
+        "srNo": "2.2(a)",
+        "category": "Corporates",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "3348",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2.2(b)",
+        "category": "Individuals(Other than RIIs)",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "971892",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "2.2(c)",
+        "category": "Others",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "33912",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "3",
+        "category": "Retail Individual Investors(RIIs)",
+        "noOfShareOffered": "5292916",
+        "noOfSharesBid": "7643862",
+        "noOfTotalMeant": "1.4441683941328372"
+      },
+      {
+        "srNo": "3(a)",
+        "category": "Cut Off",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "6208974",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "3(b)",
+        "category": "Price bids",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "1434888",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "4",
+        "category": "Employees",
+        "noOfShareOffered": "35750",
+        "noOfSharesBid": "111726",
+        "noOfTotalMeant": "3.1252027972027974"
+      },
+      {
+        "srNo": "4(a)",
+        "category": "Cut Off",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "97362",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": "4(b)",
+        "category": "Price Bids",
+        "noOfShareOffered": "",
+        "noOfSharesBid": "14364",
+        "noOfTotalMeant": ""
+      },
+      {
+        "srNo": null,
+        "category": "Total",
+        "noOfShareOffered": "1.0546297E7",
+        "noOfSharesBid": "1.0780074E7",
+        "noOfTotalMeant": "1.0221667377658719"
+      }
+    ]
+  },
+  "demandGraph": {
+    "noOfShare": "Cumulative Demand(no. of shares in lakhs)",
+    "note": "Cumulative (NSE) bid quantity at each price point includes the quantity (NSE) bidded at that relevant price point and all valid bids above that price point.",
+    "totalBidAtCutOff": "3532626",
+    "heading1": "All Time Plastics Limited- Graphical display of bids received *",
+    "TOTAL_BIDS": "5303826",
+    "totalIssueSize": "10546297",
+    "heading2": "(* indicates bids position and not necessarily the subscription to the issue)",
+    "plotData": {
+      "260": "53,03,826",
+      "261": "52,93,458",
+      "262": "52,92,756",
+      "263": "52,92,324",
+      "264": "52,92,216",
+      "265": "52,92,162",
+      "267": "52,90,272",
+      "268": "52,90,218",
+      "269": "52,90,056",
+      "270": "52,89,732",
+      "271": "52,86,222",
+      "272": "52,86,168",
+      "273": "52,86,114",
+      "274": "52,85,790",
+      "275": "52,81,794",
+      "Cut-Off": "35,32,626"
+    },
+    "noOfTimesIssueSubscribed": "0.50",
+    "graphData": [
+      {
+        "type": "260",
+        "value": "0.104"
+      },
+      {
+        "type": "261",
+        "value": "0.007"
+      },
+      {
+        "type": "262",
+        "value": "0.004"
+      },
+      {
+        "type": "263",
+        "value": "0.001"
+      },
+      {
+        "type": "264",
+        "value": "0.001"
+      },
+      {
+        "type": "265",
+        "value": "0.019"
+      },
+      {
+        "type": "267",
+        "value": "0.001"
+      },
+      {
+        "type": "268",
+        "value": "0.002"
+      },
+      {
+        "type": "269",
+        "value": "0.003"
+      },
+      {
+        "type": "270",
+        "value": "0.035"
+      },
+      {
+        "type": "271",
+        "value": "0.001"
+      },
+      {
+        "type": "272",
+        "value": "0.001"
+      },
+      {
+        "type": "273",
+        "value": "0.003"
+      },
+      {
+        "type": "274",
+        "value": "0.04"
+      },
+      {
+        "type": "275",
+        "value": "17.492"
+      },
+      {
+        "type": "Cut-off",
+        "value": "35.326"
+      }
+    ],
+    "graphLogic": "https://nsearchives.nseindia.com/content/ipo/ipo_graph_logic.pdf",
+    "totalBidRecieved": "5303826",
+    "timestamp": "As on 08-Aug-2025 17:00:30 IST"
+  },
+  "demandDataNSE": [
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "Cut-Off",
+      "cumQty": "35,32,626"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "275",
+      "cumQty": "52,81,794"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "274",
+      "cumQty": "52,85,790"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "273",
+      "cumQty": "52,86,114"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "272",
+      "cumQty": "52,86,168"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "271",
+      "cumQty": "52,86,222"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "270",
+      "cumQty": "52,89,732"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "269",
+      "cumQty": "52,90,056"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "268",
+      "cumQty": "52,90,218"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "267",
+      "cumQty": "52,90,272"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "265",
+      "cumQty": "52,92,162"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "264",
+      "cumQty": "52,92,216"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "263",
+      "cumQty": "52,92,324"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "262",
+      "cumQty": "52,92,756"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "261",
+      "cumQty": "52,93,458"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:30",
+      "price": "260",
+      "cumQty": "53,03,826"
+    }
+  ],
+  "demandDataBSE": [
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "Cut-Off",
+      "cumQty": "63,06,336"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "275",
+      "cumQty": "1,07,57,880"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "274",
+      "cumQty": "1,07,67,546"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "273",
+      "cumQty": "1,07,71,272"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "272",
+      "cumQty": "1,07,71,434"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "271",
+      "cumQty": "1,07,71,704"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "270",
+      "cumQty": "1,07,79,966"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "269",
+      "cumQty": "1,07,80,290"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "268",
+      "cumQty": "1,07,82,450"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "267",
+      "cumQty": "1,07,82,612"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "266",
+      "cumQty": "1,07,82,828"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "265",
+      "cumQty": "1,07,89,524"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "264",
+      "cumQty": "1,07,90,496"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "263",
+      "cumQty": "1,07,91,414"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "262",
+      "cumQty": "1,07,92,062"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "261",
+      "cumQty": "1,07,94,114"
+    },
+    {
+      "symbol": "ALLTIME",
+      "company": "All Time Plastics Limited",
+      "timestamp": "08-Aug-2025 17:00:00",
+      "price": "260",
+      "cumQty": "1,08,10,908"
+    }
+  ],
+  "demandGraphALL": {
+    "noOfShare": "Cumulative Demand(no. of shares in lakhs)",
+    "note": "Cumulative bid quantity at each price point includes the quantity bid at that relevant price point and all valid bids at the next higher price point.  The graph is updated every hour.",
+    "totalBidAtCutOff": "6306336",
+    "heading1": "All Time Plastics Limited- Graphical display of bids received *",
+    "TOTAL_BIDS": "10810908",
+    "totalIssueSize": "10546297",
+    "heading2": "(* indicates bids position and not necessarily the subscription to the issue)",
+    "plotData": {
+      "260": "1,08,10,908",
+      "261": "1,07,94,114",
+      "262": "1,07,92,062",
+      "263": "1,07,91,414",
+      "264": "1,07,90,496",
+      "265": "1,07,89,524",
+      "266": "1,07,82,828",
+      "267": "1,07,82,612",
+      "268": "1,07,82,450",
+      "269": "1,07,80,290",
+      "270": "1,07,79,966",
+      "271": "1,07,71,704",
+      "272": "1,07,71,434",
+      "273": "1,07,71,272",
+      "274": "1,07,67,546",
+      "275": "1,07,57,880",
+      "Cut-Off": "63,06,336"
+    },
+    "noOfTimesIssueSubscribed": "1.03",
+    "graphData": [
+      {
+        "type": "260",
+        "value": "0.168"
+      },
+      {
+        "type": "261",
+        "value": "0.021"
+      },
+      {
+        "type": "262",
+        "value": "0.006"
+      },
+      {
+        "type": "263",
+        "value": "0.009"
+      },
+      {
+        "type": "264",
+        "value": "0.01"
+      },
+      {
+        "type": "265",
+        "value": "0.067"
+      },
+      {
+        "type": "266",
+        "value": "0.002"
+      },
+      {
+        "type": "267",
+        "value": "0.002"
+      },
+      {
+        "type": "268",
+        "value": "0.022"
+      },
+      {
+        "type": "269",
+        "value": "0.003"
+      },
+      {
+        "type": "270",
+        "value": "0.083"
+      },
+      {
+        "type": "271",
+        "value": "0.003"
+      },
+      {
+        "type": "272",
+        "value": "0.002"
+      },
+      {
+        "type": "273",
+        "value": "0.037"
+      },
+      {
+        "type": "274",
+        "value": "0.097"
+      },
+      {
+        "type": "275",
+        "value": "44.515"
+      },
+      {
+        "type": "Cut-off",
+        "value": "63.063"
+      }
+    ],
+    "graphLogic": "https://nsearchives.nseindia.com/content/ipo/ipo_graph_logic.pdf",
+    "totalBidRecieved": "10810908",
+    "timestamp": "As on 08-Aug-2025 17:00:00 IST"
+  }
+}
