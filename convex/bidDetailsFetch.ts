@@ -137,17 +137,6 @@ async function processBidData(ctx: any, data: any, symbol: string, companyName: 
         updateTime: updateTime,
       });
       
-      // Also keep the old table updated for backward compatibility
-      await ctx.runMutation(internal.bidDetails.upsertBidDetail, {
-        symbol: symbol,
-        companyName: companyName,
-        srNo: srNoValue,
-        category: bidDetail.category || "",
-        noOfShareOffered: formatNumericValue(bidDetail.noOfShareOffered),
-        noOfSharesBid: formatNumericValue(bidDetail.noOfSharesBid),
-        noOfTotalMeant: formatNumericValue(bidDetail.noOfTotalMeant),
-      });
-      
       processedCount++;
       const isTotal = !bidDetail.srNo && bidDetail.category?.toLowerCase() === "total";
       const logPrefix = isTotal ? "🔢 [TOTAL]" : "✅";

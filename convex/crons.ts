@@ -13,7 +13,7 @@ export const manualSequentialFetch = action({
 // Internal sequential fetch function
 export const sequentialFetch = internalAction({
   args: {},
-  handler: async (ctx): Promise<{ success: boolean; upcomingResult?: any; bidResult?: any; error?: string }> => {
+  handler: async (ctx): Promise<{ success: boolean; upcomingResult?: any; bidResult?: any; smeResult?: any; error?: string }> => {
     try {
       console.log("🚀 Starting sequential data collection...");
       
@@ -26,16 +26,26 @@ export const sequentialFetch = internalAction({
       console.log("⏳ Waiting 30 seconds before fetching bid details...");
       await new Promise(resolve => setTimeout(resolve, 30000));
       
-      // Step 3: Fetch bid details
-      console.log("🎯 Step 2: Fetching bid details...");
+      // Step 3: Fetch mainboard bid details
+      console.log("🎯 Step 2: Fetching mainboard bid details...");
       const bidResult: any = await ctx.runAction(internal.bidDetailsFetch.fetchAllBidDetails, {});
-      console.log("✅ Bid details fetch completed:", bidResult);
+      console.log("✅ Mainboard bid details fetch completed:", bidResult);
+      
+      // Step 4: Wait 30 seconds before fetching SME bid details
+      console.log("⏳ Waiting 30 seconds before fetching SME bid details...");
+      await new Promise(resolve => setTimeout(resolve, 30000));
+      
+      // Step 5: Fetch SME bid details
+      console.log("🎯 Step 3: Fetching SME bid details...");
+      const smeResult: any = await ctx.runAction(internal.bidDetailsFetchSME_new.fetchAllBidDetailsSME, {});
+      console.log("✅ SME bid details fetch completed:", smeResult);
       
       console.log("🎉 Sequential data collection completed successfully!");
       return { 
         success: true, 
         upcomingResult,
-        bidResult 
+        bidResult,
+        smeResult
       };
       
     } catch (error) {
@@ -57,6 +67,6 @@ crons.interval("fetch NSE IPO data", { minutes: 60 }, internal.nse.fetchNseData,
 crons.interval("fetch bid details", { minutes: 60 }, internal.bidDetailsFetch.fetchAllBidDetails, {});
 
 // Fetch bid details for SME IPOs every 1 hour
-crons.interval("fetch SME bid details", { minutes: 60 }, internal.bidDetailsFetchSME.fetchAllBidDetailsSME, {});
+crons.interval("fetch SME bid details", { minutes: 60 }, internal.bidDetailsFetchSME_new.fetchAllBidDetailsSME, {});
 
 export default crons;

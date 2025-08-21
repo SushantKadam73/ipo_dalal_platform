@@ -127,6 +127,8 @@ export const getIpoStats = query({
       closed: allIpos.filter(ipo => ipo.status.toLowerCase().includes("closed")).length,
       mainboard: allIpos.filter(ipo => ipo.series === "EQ").length,
       sme: allIpos.filter(ipo => ipo.series === "SME").length,
+      activeSME: allIpos.filter(ipo => ipo.series === "SME" && ipo.status.toLowerCase().includes("active")).length,
+      activeEQ: allIpos.filter(ipo => ipo.series === "EQ" && ipo.status.toLowerCase().includes("active")).length,
     };
     
     return stats;

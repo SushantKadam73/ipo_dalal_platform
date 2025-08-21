@@ -3,13 +3,18 @@ import { api } from "../convex/_generated/api";
 import { useState } from "react";
 import React from "react";
 import { BidDetails } from "./components/BidDetails";
+import { useToast } from "./hooks/useToast";
+import { ToastContainer } from "./components/ToastContainer";
 
 export function IpoDashboard() {
   const [selectedStatus, setSelectedStatus] = useState<string>("");
   const [selectedSeries, setSelectedSeries] = useState<"EQ" | "SME" | "">("");
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [isRefreshingBids, setIsRefreshingBids] = useState(false);
+  const [isRefreshingBidsSME, setIsRefreshingBidsSME] = useState(false);
   const [expandedBidDetails, setExpandedBidDetails] = useState<string | null>(null);
+  
+  const { toasts, addToast, removeToast } = useToast();
   
   const ipos = useQuery(api.ipos.listIpos, {
     status: selectedStatus || undefined,
@@ -19,6 +24,7 @@ export function IpoDashboard() {
   const stats = useQuery(api.ipos.getIpoStats);
   const manualFetch = useAction(api.nse.manualFetchNseData);
   const manualFetchBids = useAction(api.bidDetailsFetch.manualFetchBidDetails);
+  const manualFetchBidsSME = useAction(api.bidDetailsFetchSME_new.manualFetchBidDetailsSME);
   const debugStatuses = useAction(api.debug.debugIpoStatuses);
 
   const handleManualRefresh = async () => {
@@ -36,14 +42,47 @@ export function IpoDashboard() {
 
   const handleManualBidRefresh = async () => {
     setIsRefreshingBids(true);
+    addToast("Starting EQ bid details collection...", "info");
     try {
       const result = await manualFetchBids({});
       console.log("Manual bid fetch result:", result);
-      // You could show a toast notification here
+      
+      if (result.success) {
+        addToast(
+          `EQ bid details collection completed! Processed ${result.count || 0} IPOs with ${result.errors || 0} errors.`,
+          result.errors && result.errors > 0 ? "error" : "success"
+        );
+      } else {
+        addToast(`EQ bid details collection failed: ${result.error || "Unknown error"}`, "error");
+      }
     } catch (error) {
       console.error("Manual bid fetch failed:", error);
+      addToast(`EQ bid details collection failed: ${error instanceof Error ? error.message : "Unknown error"}`, "error");
     } finally {
       setIsRefreshingBids(false);
+    }
+  };
+
+  const handleManualBidRefreshSME = async () => {
+    setIsRefreshingBidsSME(true);
+    addToast("Starting SME bid details collection...", "info");
+    try {
+      const result = await manualFetchBidsSME({});
+      console.log("Manual SME bid fetch result:", result);
+      
+      if (result.success) {
+        addToast(
+          `SME bid details collection completed! Processed ${result.count || 0} IPOs with ${result.errors || 0} errors.`,
+          result.errors && result.errors > 0 ? "error" : "success"
+        );
+      } else {
+        addToast(`SME bid details collection failed: ${result.error || "Unknown error"}`, "error");
+      }
+    } catch (error) {
+      console.error("Manual SME bid fetch failed:", error);
+      addToast(`SME bid details collection failed: ${error instanceof Error ? error.message : "Unknown error"}`, "error");
+    } finally {
+      setIsRefreshingBidsSME(false);
     }
   };
 
@@ -66,6 +105,8 @@ export function IpoDashboard() {
 
   return (
     <div className="space-y-6">
+      <ToastContainer toasts={toasts} removeToast={removeToast} />
+      
       {/* Header */}
       <div className="text-center">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">IPO Dashboard</h1>
@@ -83,7 +124,24 @@ export function IpoDashboard() {
             disabled={isRefreshingBids}
             className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
-            {isRefreshingBids ? "Refreshing..." : "Refresh Bid Details"}
+            {isRefreshingBids ? "Refreshing..." : "Refresh Bid Details (EQ)"}
+          </button>
+          <button
+            onClick={handleManualBidRefreshSME}
+            disabled={isRefreshingBidsSME}
+            className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors relative"
+          >
+            {isRefreshingBidsSME ? (
+              <span className="flex items-center">
+                <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Collecting...
+              </span>
+            ) : (
+              "🚀 Start SME Bid Collection"
+            )}
           </button>
           <button
             onClick={handleDebugStatuses}
@@ -95,13 +153,15 @@ export function IpoDashboard() {
       </div>
 
       {/* Stats Cards */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 gap-4">
         <StatCard title="Total IPOs" value={stats.total} color="bg-blue-500" />
         <StatCard title="Active" value={stats.active} color="bg-green-500" />
         <StatCard title="Upcoming" value={stats.upcoming} color="bg-yellow-500" />
         <StatCard title="Closed" value={stats.closed} color="bg-gray-500" />
         <StatCard title="Mainboard" value={stats.mainboard} color="bg-purple-500" />
         <StatCard title="SME" value={stats.sme} color="bg-indigo-500" />
+        <StatCard title="Active EQ" value={stats.activeEQ} color="bg-emerald-500" />
+        <StatCard title="Active SME" value={stats.activeSME} color="bg-cyan-500" />
       </div>
 
       {/* Filters */}
@@ -199,7 +259,7 @@ export function IpoDashboard() {
                       }
                       showBidDetails={expandedBidDetails === ipo.symbol}
                     />
-                    {expandedBidDetails === ipo.symbol && ipo.series === "EQ" && ipo.status.toLowerCase().includes("active") && (
+                    {expandedBidDetails === ipo.symbol && (
                       <tr>
                         <td colSpan={8} className="px-6 py-4 bg-gray-50">
                           <BidDetails symbol={ipo.symbol} companyName={ipo.companyName} />
@@ -283,7 +343,7 @@ function IpoRow({ ipo, onToggleBidDetails, showBidDetails }: {
         )}
       </td>
       <td className="px-6 py-4 whitespace-nowrap text-center">
-        {ipo.series === "EQ" && ipo.status.toLowerCase().includes("active") && onToggleBidDetails ? (
+        {onToggleBidDetails ? (
           <button
             onClick={() => onToggleBidDetails(ipo.symbol)}
             className="px-3 py-1 bg-blue-500 text-white text-xs rounded-md hover:bg-blue-600 transition-colors"

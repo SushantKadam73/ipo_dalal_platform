@@ -23,20 +23,7 @@ const applicationTables = {
     .index("by_issue_start_date", ["issueStartDate"])
     .index("by_status_and_series", ["status", "series"]),
   
-  bidDetailsMainboard: defineTable({
-    symbol: v.string(),
-    companyName: v.string(),
-    srNo: v.string(),
-    category: v.string(),
-    noOfShareOffered: v.string(),
-    noOfSharesBid: v.string(),
-    noOfTotalMeant: v.string(),
-    lastUpdated: v.number(),
-  })
-    .index("by_symbol", ["symbol"])
-    .index("by_symbol_and_category", ["symbol", "category"]),
-  
-  // New time series table for bid details with enhanced structure
+  // Time series table for mainboard (EQ) bid details with enhanced structure
   bidDetailsActiveEQ: defineTable({
     symbol: v.string(),
     srNo: v.string(),

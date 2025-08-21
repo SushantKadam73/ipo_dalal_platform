@@ -1,98 +1,150 @@
 import { v } from "convex/values";
 import { query, internalMutation } from "./_generated/server";
 
-export const listBidDetails = query({
-  args: {
-    symbol: v.optional(v.string()),
-  },
-  handler: async (ctx, args) => {
-    if (args.symbol) {
-      return await ctx.db
-        .query("bidDetailsMainboard")
-        .withIndex("by_symbol", (q) => q.eq("symbol", args.symbol!))
-        .order("desc")
-        .collect();
-    }
-    
-    return await ctx.db.query("bidDetailsMainboard").order("desc").collect();
-  },
-});
-
-export const getBidDetailsBySymbol = query({
+// New unified query that gets bid details from both EQ and SME tables
+export const getBidDetailsBySymbolUnified = query({
   args: { symbol: v.string() },
   handler: async (ctx, args) => {
-    const bidDetails = await ctx.db
-      .query("bidDetailsMainboard")
-      .withIndex("by_symbol", (q) => q.eq("symbol", args.symbol))
-      .collect();
-    return bidDetails;
-  },
-});
-
-export const upsertBidDetail = internalMutation({
-  args: {
-    symbol: v.string(),
-    companyName: v.string(),
-    srNo: v.string(),
-    category: v.string(),
-    noOfShareOffered: v.string(),
-    noOfSharesBid: v.string(),
-    noOfTotalMeant: v.string(),
-  },
-  handler: async (ctx, args) => {
-    const existingBidDetail = await ctx.db
-      .query("bidDetailsMainboard")
-      .withIndex("by_symbol_and_category", (q) => 
-        q.eq("symbol", args.symbol).eq("category", args.category)
-      )
-      .first();
-
-    const bidDetailData = {
-      ...args,
-      lastUpdated: Date.now(),
-    };
-
-    if (existingBidDetail) {
-      await ctx.db.patch(existingBidDetail._id, bidDetailData);
-      return existingBidDetail._id;
-    } else {
-      return await ctx.db.insert("bidDetailsMainboard", bidDetailData);
-    }
-  },
-});
-
-export const getBidDetailsSummary = query({
-  args: { symbol: v.string() },
-  handler: async (ctx, args) => {
-    const bidDetails = await ctx.db
-      .query("bidDetailsMainboard")
+    // Try to get EQ (mainboard) bid details first
+    const eqBidDetails = await ctx.db
+      .query("bidDetailsActiveEQ")
       .withIndex("by_symbol", (q) => q.eq("symbol", args.symbol))
       .collect();
     
-    if (bidDetails.length === 0) {
-      return null;
-    }
-
-    // Calculate summary statistics
-    const totalSharesOffered = bidDetails
-      .filter(bd => bd.noOfShareOffered && !isNaN(Number(bd.noOfShareOffered)))
-      .reduce((sum, bd) => sum + Number(bd.noOfShareOffered), 0);
+    if (eqBidDetails.length > 0) {
+      // Transform EQ time series data to match the format expected by the frontend
+      const getLatestValue = (timeSeries: Array<{value: string, timestamp: number}>) => {
+        if (timeSeries.length === 0) return "0";
+        return timeSeries[timeSeries.length - 1].value;
+      };
       
-    const totalSharesBid = bidDetails
-      .filter(bd => bd.noOfSharesBid && !isNaN(Number(bd.noOfSharesBid)))
-      .reduce((sum, bd) => sum + Number(bd.noOfSharesBid), 0);
+      return eqBidDetails.map(eqDetail => ({
+        _id: eqDetail._id,
+        _creationTime: eqDetail._creationTime,
+        symbol: eqDetail.symbol,
+        companyName: "", // EQ details don't store company name in this table
+        srNo: eqDetail.srNo,
+        category: eqDetail.category,
+        noOfShareOffered: eqDetail.noOfShareOffered,
+        noOfSharesBid: getLatestValue(eqDetail.noOfSharesBid),
+        noOfTotalMeant: getLatestValue(eqDetail.noOfTotalMeant),
+        lastUpdated: eqDetail.lastUpdated,
+      }));
+    }
+    
+    // If no EQ data, try to get SME bid details and transform to same format
+    const smeBidDetails = await ctx.db
+      .query("bidDetailsActiveSME")
+      .withIndex("by_symbol", (q) => q.eq("symbol", args.symbol))
+      .collect();
+    
+    if (smeBidDetails.length > 0) {
+      // Transform SME data to match the format expected by the frontend
+      // Get the latest values from time series data
+      const getLatestValue = (timeSeries: Array<{value: string, timestamp: number}>) => {
+        if (timeSeries.length === 0) return "0";
+        return timeSeries[timeSeries.length - 1].value;
+      };
+      
+      return smeBidDetails.map(smeDetail => ({
+        _id: smeDetail._id,
+        _creationTime: smeDetail._creationTime,
+        symbol: smeDetail.symbol,
+        companyName: "", // SME details don't store company name in this table
+        srNo: smeDetail.srNo,
+        category: smeDetail.category,
+        noOfShareOffered: smeDetail.noOfShareOffered,
+        noOfSharesBid: getLatestValue(smeDetail.noOfSharesBid),
+        noOfTotalMeant: getLatestValue(smeDetail.noOfTotalMeant),
+        lastUpdated: smeDetail.lastUpdated,
+      }));
+    }
+    
+    return [];
+  },
+});
 
-    const overallSubscription = totalSharesOffered > 0 ? totalSharesBid / totalSharesOffered : 0;
+// New unified summary query that works for both EQ and SME
+export const getBidDetailsSummaryUnified = query({
+  args: { symbol: v.string() },
+  handler: async (ctx, args) => {
+    // Try EQ (ActiveEQ) first
+    const eqBidDetails = await ctx.db
+      .query("bidDetailsActiveEQ")
+      .withIndex("by_symbol", (q) => q.eq("symbol", args.symbol))
+      .collect();
+    
+    if (eqBidDetails.length > 0) {
+      // Get latest values from time series data
+      const getLatestValue = (timeSeries: Array<{value: string, timestamp: number}>) => {
+        if (timeSeries.length === 0) return "0";
+        return timeSeries[timeSeries.length - 1].value;
+      };
 
-    return {
-      symbol: args.symbol,
-      companyName: bidDetails[0]?.companyName || "",
-      totalCategories: bidDetails.length,
-      totalSharesOffered,
-      totalSharesBid,
-      overallSubscription,
-      lastUpdated: Math.max(...bidDetails.map(bd => bd.lastUpdated)),
-    };
+      // Calculate summary statistics for EQ using latest values
+      const totalSharesOffered = eqBidDetails
+        .filter(bd => bd.noOfShareOffered && !isNaN(Number(bd.noOfShareOffered)))
+        .reduce((sum, bd) => sum + Number(bd.noOfShareOffered), 0);
+        
+      const totalSharesBid = eqBidDetails
+        .filter(bd => bd.noOfSharesBid.length > 0)
+        .reduce((sum, bd) => {
+          const latestValue = getLatestValue(bd.noOfSharesBid);
+          return sum + (isNaN(Number(latestValue)) ? 0 : Number(latestValue));
+        }, 0);
+
+      const overallSubscription = totalSharesOffered > 0 ? totalSharesBid / totalSharesOffered : 0;
+
+      return {
+        symbol: args.symbol,
+        companyName: "", // EQ doesn't store company name in this table
+        totalCategories: eqBidDetails.length,
+        totalSharesOffered,
+        totalSharesBid,
+        overallSubscription,
+        lastUpdated: Math.max(...eqBidDetails.map(bd => bd.lastUpdated)),
+      };
+    }
+    
+    // If no EQ data, try SME
+    const smeBidDetails = await ctx.db
+      .query("bidDetailsActiveSME")
+      .withIndex("by_symbol", (q) => q.eq("symbol", args.symbol))
+      .collect();
+    
+    if (smeBidDetails.length > 0) {
+      // Get latest values from time series data
+      const getLatestValue = (timeSeries: Array<{value: string, timestamp: number}>) => {
+        if (timeSeries.length === 0) return "0";
+        return timeSeries[timeSeries.length - 1].value;
+      };
+
+      // Calculate summary statistics for SME using latest values
+      const totalSharesOffered = smeBidDetails
+        .filter(bd => bd.noOfShareOffered && !isNaN(Number(bd.noOfShareOffered)))
+        .reduce((sum, bd) => sum + Number(bd.noOfShareOffered), 0);
+        
+      const totalSharesBid = smeBidDetails
+        .filter(bd => bd.noOfSharesBid.length > 0)
+        .reduce((sum, bd) => {
+          const latestValue = getLatestValue(bd.noOfSharesBid);
+          return sum + (isNaN(Number(latestValue)) ? 0 : Number(latestValue));
+        }, 0);
+
+      const overallSubscription = totalSharesOffered > 0 ? totalSharesBid / totalSharesOffered : 0;
+
+      return {
+        symbol: args.symbol,
+        companyName: "", // SME doesn't store company name in this table
+        totalCategories: smeBidDetails.length,
+        totalSharesOffered,
+        totalSharesBid,
+        overallSubscription,
+        lastUpdated: Math.max(...smeBidDetails.map(bd => bd.lastUpdated)),
+      };
+    }
+    
+    return null;
   },
 });
 

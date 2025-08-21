@@ -9,8 +9,8 @@ interface BidDetailsProps {
 }
 
 export function BidDetails({ symbol, companyName }: BidDetailsProps) {
-  const bidDetails = useQuery(api.bidDetails.getBidDetailsBySymbol, { symbol });
-  const bidSummary = useQuery(api.bidDetails.getBidDetailsSummary, { symbol });
+  const bidDetails = useQuery(api.bidDetails.getBidDetailsBySymbolUnified, { symbol });
+  const bidSummary = useQuery(api.bidDetails.getBidDetailsSummaryUnified, { symbol });
   
   // Try to get time series data - first check for EQ (mainboard), then SME
   const bidDetailsActiveEQ = useQuery(api.bidDetails.getBidDetailsActiveEQSummary, { symbol });
